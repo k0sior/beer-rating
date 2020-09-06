@@ -1,5 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+The goal is to create a web app where anyone (18+) can add a beer that is not already in the base, rate those beers and post comments. Those features will be avaliable only to logged in users.
 ## Available Scripts
 
 In the project directory, you can run:
