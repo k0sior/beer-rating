@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  grid-template-areas:"logo navBar searchBox" 
+                      "leftSide main rightSide"
+                      "footer footer footer";
 }
 
 code {

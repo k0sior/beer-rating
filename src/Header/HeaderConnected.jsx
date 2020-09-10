@@ -8,7 +8,7 @@ import { Title } from "./Title.jsx"
 export class HeaderConnected extends React.Component {
 
   render () {
-
+    const addBeerView = this.props.addBeerView
     return(
       <div className='headerConnected' 
       style={{
@@ -17,9 +17,9 @@ export class HeaderConnected extends React.Component {
         flexDirection: "row",
         justifyContent: "space-evenly",
         alignItems: "center",
-        }}>
+      }}>
         <Title />
-        <NavBar />
+        <NavBar addBeerView={addBeerView}/>
         <SearchBox />
       </div>
     )

@@ -10,8 +10,7 @@ export class SearchBox extends React.Component {
         <form style={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "flex-end",
-      }}>
+        alignItems: "flex-end",}}>
           <input
             type="text"
             placeholder="Szukaj..."

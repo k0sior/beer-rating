@@ -11,12 +11,12 @@ export class ConnectedApp extends React.Component {
     super(props)
 
     this.state = {
-      warning : false,
-      main: false,
+      warning : true,
       addBeer: false,
-
     }
+
     this.entryView = this.entryView.bind(this)
+    this.addBeerView = this.addBeerView.bind(this)
   }
 
   entryView() {
@@ -25,12 +25,18 @@ export class ConnectedApp extends React.Component {
     })
   }
 
+  addBeerView() {
+    this.setState({
+      addBeer: !this.state.addBeer
+    })
+  }
+  
   render () {
     const warning = this.state.warning
     return (
       <div className="connectedApp">
         { warning && <Warning entryView={this.entryView} />}
-        { !warning && <HeaderConnected /> }
+        { !warning && <HeaderConnected addBeerView={this.addBeerView} /> }
         { this.state.addBeer && <InputForm /> }
         { }
         { !warning && <Footer />}
