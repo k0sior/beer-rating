@@ -6,13 +6,13 @@ export class InputForm extends React.Component {
   render() {
 
     return (
-      <div for='inputFormWrapper' id="inputForm">
-        <table for='inputFormTable' cellspacing="20" style={{ width: 250 }}>
+      <div htmlFor='inputFormWrapper' id="inputForm">
+        <table htmlFor='inputFormTable' cellSpacing="20" cellPadding="5" style={{ width: 250}}>
           <tbody>
             <tr>
               <td colSpan="2">
-                <form for='inputForm'>
-                  <label for='beerName'>Nazwa</label><br />
+                <form htmlFor='inputForm'>
+                  <label htmlFor='beerName'>Nazwa</label><br />
                   <input
                     type='text'
                     id='beerInputName'
@@ -25,7 +25,7 @@ export class InputForm extends React.Component {
                       <tr>
                         <td>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerType'>Gatunek</label>
+                            <label htmlFor='beerType'>Gatunek</label>
                             <br />
                             <input
                               type='text'
@@ -37,7 +37,7 @@ export class InputForm extends React.Component {
                         </td>
                         <td>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerAlcohol'>Zawartość alkoholu</label>
+                            <label htmlFor='beerAlcohol'>Zawartość alkoholu</label>
                             <br />
                             <input
                               type='text'
@@ -52,7 +52,7 @@ export class InputForm extends React.Component {
                       <tr>
                         <td colSpan="3">
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerExtract'>Ekstrakt</label>
+                            <label htmlFor='beerExtract'>Ekstrakt</label>
                             <br />
                             <input
                               type='text'
@@ -62,7 +62,7 @@ export class InputForm extends React.Component {
                             </input>
                           </div>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerIbu'>IBU</label>
+                            <label htmlFor='beerIbu'>IBU</label>
                             <br />
                             <input
                               type='text'
@@ -72,7 +72,7 @@ export class InputForm extends React.Component {
                             </input>
                           </div>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerHop'>Gatunek chmielu</label>
+                            <label htmlFor='beerHop'>Gatunek chmielu</label>
                             <br />
                             <input
                               type='text'
@@ -87,7 +87,7 @@ export class InputForm extends React.Component {
                       <tr>
                         <td>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerProducer'>Producent/Importer</label>
+                            <label htmlFor='beerProducer'>Producent/Importer</label>
                             <br />
                             <input
                               type='text'
@@ -99,7 +99,7 @@ export class InputForm extends React.Component {
                         </td>
                         <td>
                           <div style={{ display: "inline-block" }}>
-                            <label for='beerCountry'>Kraj pochodzenia</label>
+                            <label htmlFor='beerCountry'>Kraj pochodzenia</label>
                             <br />
                             <input
                               type='text'
@@ -113,7 +113,7 @@ export class InputForm extends React.Component {
                     </tbody>
                   </table>
                   <br />
-                  <label for='beerPhoto'>Zdjęcie</label>
+                  <label htmlFor='beerPhoto'>Zdjęcie</label>
                   <br />
                   <input
                     type="url"
@@ -123,7 +123,7 @@ export class InputForm extends React.Component {
                     style={{ width: 378 }}>
                   </input>
                   <br /> <br />
-                  <label for='beerDecription'>Dodaj opis</label>
+                  <label htmlFor='beerDecription'>Dodaj opis</label>
                   <br />
                   <textarea
                     style={{ width: 378, height: 200}}

@@ -2,35 +2,40 @@ import React from 'react';
 import './css/App.css';
 import { Warning } from "./Warning/Warning.jsx"
 import { InputForm } from './Add/InputForm.jsx'
-
+import { HeaderConnected } from './Header/HeaderConnected';
+import { Footer } from './Footer/Footer.jsx'
 
 export class ConnectedApp extends React.Component {
   
   constructor(props) {
     super(props)
 
-    this.stat = {
-      active: "warning"
+    this.state = {
+      warning : false,
+      main: false,
+      addBeer: false,
+
     }
+    this.entryView = this.entryView.bind(this)
   }
 
-  changeView(view) {
+  entryView() {
     this.setState({
-      active: view
+      warning: !this.state.warning
     })
   }
 
   render () {
-
+    const warning = this.state.warning
     return (
       <div className="connectedApp">
-        <Warning />
-        <InputForm />
-
-        
+        { warning && <Warning entryView={this.entryView} />}
+        { !warning && <HeaderConnected /> }
+        { this.state.addBeer && <InputForm /> }
+        { }
+        { !warning && <Footer />}
       </div>
+
     );
-  }
-}
-
-
+  } 
+} 

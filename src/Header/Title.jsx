@@ -1,15 +1,13 @@
 import React from 'react';
-import logo from '../images/logo.jpg'
+import logo from '../images/logo.png'
 
 
-class Title extends React.Component {
+export class Title extends React.Component {
 
   render() {
+
     return (
       <div className='titleWrapper'>
-        <div className='titleText'>
-          <h1>Beer-Rating</h1>
-        </div>
         <div className='titleLogo'>
           <img src={logo} alt={"Logo"} />
         </div>

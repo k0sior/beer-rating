@@ -1,17 +1,25 @@
 import React from 'react'
 
 
-class NavBar extends React.Component {
+export class NavBar extends React.Component {
+
   render() {
 
     return (
-      <div className='navBarWrapper'>
+      <div className='navBarWrapper' >
         <nav className='navBar'>
-          <ul className='navBarList'>
-            <li><a href="#">Strona główna</a></li>
-            <li><a href="#">Katalog</a></li>
-            <li><a href="#">Najwyżej oceniane</a></li>
-            <li><a href="#">Kontakt</a></li>
+          <ul className='navBarList' 
+            style={{
+              width: 500,
+              display: "flex", 
+              flexDirection: "row",
+              justifyContent:'space-between', 
+              listStyleType: 'none'}}>
+            <li>Strona główna</li>
+            <li>Katalog</li>
+            <li>Najwyżej oceniane</li>
+            <li>Kontakt</li>
+            <li>Dodaj piwo</li>
           </ul>
         </nav>
       </div>
