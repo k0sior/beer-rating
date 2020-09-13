@@ -4,7 +4,7 @@ import React from 'react'
 export class NavBar extends React.Component {
 
   render() {
-    const addBeerView = this.props.addBeerView
+    const addBeerView = this.props.addBeerView;
     return (
       <div className='navBarWrapper' >
         <nav className='navBar'>
@@ -21,7 +21,7 @@ export class NavBar extends React.Component {
             <li>Katalog</li>
             <li>Najwyżej oceniane</li>
             <li>Kontakt</li>
-            <li><button type="button" id="addBeer" onClick={addBeerView}>Dodaj piwo </button></li>
+            <li><a href="#" id="addBeer" onClick={addBeerView}>Dodaj piwo</a></li>
           </ul>
         </nav>
       </div>

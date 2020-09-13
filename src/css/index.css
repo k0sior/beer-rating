@@ -9,6 +9,9 @@ body {
   grid-template-areas:"logo navBar searchBox" 
                       "leftSide main rightSide"
                       "footer footer footer";
+  grid-template-columns: 10% auto 40%;
+  grid-template-rows: 200px auto 200px;
+  background-color: rgb(250, 192, 84);
 }
 
 code {

@@ -9,25 +9,24 @@ export class ConnectedApp extends React.Component {
   
   constructor(props) {
     super(props)
-
     this.state = {
       warning : true,
       addBeer: false,
+      main: false,
     }
-
     this.entryView = this.entryView.bind(this)
     this.addBeerView = this.addBeerView.bind(this)
   }
 
   entryView() {
     this.setState({
-      warning: !this.state.warning
+      warning: false
     })
   }
 
   addBeerView() {
     this.setState({
-      addBeer: !this.state.addBeer
+      addBeer: true
     })
   }
   

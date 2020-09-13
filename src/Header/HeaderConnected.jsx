@@ -11,13 +11,12 @@ export class HeaderConnected extends React.Component {
     const addBeerView = this.props.addBeerView
     return(
       <div className='headerConnected' 
-      style={{
-        gridArea: "header",
-        display: 'flex',
-        flexDirection: "row",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-      }}>
+        style={{
+          gridArea: "header",
+          display: 'flex',
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          alignItems: "center",}}>
         <Title />
         <NavBar addBeerView={addBeerView}/>
         <SearchBox />

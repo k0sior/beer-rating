@@ -9,7 +9,7 @@ export class Title extends React.Component {
     return (
       <div className='titleWrapper'>
         <div className='titleLogo'>
-          <img src={logo} alt={"Logo"} />
+          <img src={logo} alt={"Beer-rating"} />
         </div>
       </div>
     )

@@ -5,7 +5,7 @@ let beerBase = []
 const beerCatalogue = (props) => {
 
     const catalogueElements = beerBase.map( (element) =>
-        <li key={element.nazwa.toString()}> 
+        <li key={element.name.toString()}> 
             { element }
         </li>
     );
