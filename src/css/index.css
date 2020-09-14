@@ -11,10 +11,36 @@ body {
                       "footer footer footer";
   grid-template-columns: 10% auto 40%;
   grid-template-rows: 200px auto 200px;
-  background-color: rgb(250, 192, 84);
+  background: url("https://cdn.hipwallpaper.com/i/34/19/PbYOj0.jpg");
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input {
+  background: rgb(207, 207, 207);
+  border-radius: 7px;
+  border: none;
+  height: 20px;
+}
+
+textarea {
+  background: rgb(207, 207, 207);
+  border-radius: 7px;
+  border: none;
+  resize: none;
+}
+
+.headerConnected {
+  background: rgba(141, 110, 89, 0.897);
+  height: 120px;
+  border-bottom: 2px black solid;
+  font-size: 16.5px;
+}
+
+a {
+  color: black;
+}
+
+

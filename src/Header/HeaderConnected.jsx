@@ -16,7 +16,8 @@ export class HeaderConnected extends React.Component {
           display: 'flex',
           flexDirection: "row",
           justifyContent: "space-evenly",
-          alignItems: "center",}}>
+          alignItems: "center",
+          minWidth: 1200}}>
         <Title />
         <NavBar addBeerView={addBeerView}/>
         <SearchBox />

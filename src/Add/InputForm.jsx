@@ -7,7 +7,13 @@ export class InputForm extends React.Component {
 
     return (
       <div htmlFor='inputFormWrapper' id="inputForm">
-        <table htmlFor='inputFormTable' cellSpacing="20" cellPadding="5" style={{ width: 250}}>
+        <table htmlFor='inputFormTable' 
+          cellSpacing="20" 
+          cellPadding="5" 
+          style={{ 
+            width: 250, 
+            backgroundColor: "rgb(211, 140, 59, 0.8)",
+            borderRadius: 10}}>
           <tbody>
             <tr>
               <td colSpan="2">
@@ -31,6 +37,7 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputType'
                               name='type'
+                              required
                               style={{ width: 180, marginRight: 10 }}>
                             </input>
                           </div>
@@ -43,6 +50,7 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputAlcohol'
                               name='alcohol'
+                              required
                               style={{ width: 180, marginRight: 10 }}>
                             </input>
                           </div>
@@ -58,6 +66,7 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputExtract'
                               name="extract"
+                              required
                               style={{ width: 114, marginRight: 10 }}>
                             </input>
                           </div>
@@ -126,7 +135,9 @@ export class InputForm extends React.Component {
                   <label htmlFor='beerDecription'>Dodaj opis</label>
                   <br />
                   <textarea
-                    style={{ width: 378, height: 200}}
+                    style={{ 
+                      width: 378, 
+                      height: 200}}
                     id='beerInputDecription'
                     name='decription'>
                   </textarea>

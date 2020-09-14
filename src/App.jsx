@@ -36,6 +36,7 @@ export class ConnectedApp extends React.Component {
       <div className="connectedApp">
         { warning && <Warning entryView={this.entryView} />}
         { !warning && <HeaderConnected addBeerView={this.addBeerView} /> }
+        <br/>
         { this.state.addBeer && <InputForm /> }
         { }
         { !warning && <Footer />}

@@ -18,7 +18,7 @@ export class NavBar extends React.Component {
               listStyleType: 'none',
               textAlign: 'left'}}>
             <li>Strona główna</li>
-            <li>Katalog</li>
+            <li>Katalog piw</li>
             <li>Najwyżej oceniane</li>
             <li>Kontakt</li>
             <li><a href="#" id="addBeer" onClick={addBeerView}>Dodaj piwo</a></li>
