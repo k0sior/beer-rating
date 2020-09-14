@@ -16,12 +16,12 @@ export class NavBar extends React.Component {
               flexDirection: "row",
               justifyContent:'space-between', 
               listStyleType: 'none',
-              textAlign: 'left'}}>
-            <li>Strona główna</li>
-            <li>Katalog piw</li>
-            <li>Najwyżej oceniane</li>
-            <li>Kontakt</li>
-            <li><a href="#" id="addBeer" onClick={addBeerView}>Dodaj piwo</a></li>
+              alignItems: "flex-start"}}>
+            <li><button type="button" id="mainPageButton">Strona główna</button></li>
+            <li><button type="button" id="beerCatalogueButton">Katalog piw</button></li>
+            <li><button type="button" id="highestRatedButton">Najwyżej oceniane</button></li>
+            <li><button type="button" id="contactButton">Kontakt</button></li>
+            <li><button type="button" id="addBeerButton" onClick={addBeerView}>Dodaj piwo</button></li>
           </ul>
         </nav>
       </div>
