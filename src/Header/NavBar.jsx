@@ -16,7 +16,7 @@ export class NavBar extends React.Component {
               flexDirection: "row",
               justifyContent:'space-between', 
               listStyleType: 'none',
-              alignItems: "flex-start"}}>
+              alignItems: "flex-start", }}>
             <li><button type="button" id="mainPageButton">Strona główna</button></li>
             <li><button type="button" id="beerCatalogueButton">Katalog piw</button></li>
             <li><button type="button" id="highestRatedButton">Najwyżej oceniane</button></li>

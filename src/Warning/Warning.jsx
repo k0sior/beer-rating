@@ -22,9 +22,11 @@ export class Warning extends React.Component {
         }}>
         <h5>OSTRZEŻENIE!</h5>
         <p>Strona wyłącznie dla osób pełnoletnich (18+)</p>
-        <form>
-          <button type="button" id='adult' onClick={entryView} >Jestem pełnoletni</button>
-          <button type='submit' formAction="https://pl.wikipedia.org/wiki/Mleko">Nie jestem pełnoletni</button>
+        <form style={{
+          padding: "0 0 20px 0",
+        }}>
+          <button type="button" id='adultButton' onClick={entryView} >Jestem pełnoletni</button>
+          <button type='submit' id="scrubButton" formAction="https://pl.wikipedia.org/wiki/Mleko">Nie jestem pełnoletni</button>
         </form>
 
       </div>
