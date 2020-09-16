@@ -19,9 +19,10 @@ body {
       "header header header header" 
       "leftSide main1 main2 rightSide"
       "footer footer footer footer";
-    grid-template-columns: 10% 45% auto 100px;
+    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 150px 800px auto 200px;
     justify-items: stretch;
+    font-family: monospace;
 
     a:visited {
       color: white;
@@ -39,26 +40,29 @@ body {
       width: auto;
       height: auto;
       transition-duration: 0.5s;
-      margin-right: 5px;
+      margin-right: 3px;
       outline: none;
+      font-family: monospace;
+
     }
 
-      button:visited {
-        background-color: white;
-      }
-      button:hover {
-        background-color: white;
-        transition-duration: 0.5s;
-        font-size: 18px;
-      }
+    button:visited {
+      background-color: white;
+    }
+    button:hover {
+      background-color: white;
+      transition-duration: 0.5s;
+      font-size: 18px;
+    }
 
     input {
       background: rgb(220, 220, 220);
       border-radius: 7px;
-      border: 2px solid black;
       height: 20px;
       transition-duration: 0.1s;
       outline: none;
+      font-family: monospace;
+
     }
 
     input:focus{
@@ -71,34 +75,36 @@ body {
       border: 2px solid black;
       resize: none;
       outline: none;
-    }
+      transition-duration: 0.1s;
+      font-family: monospace;
 
+    }
+    
     textarea:focus{
-      background-color: white;
+      background: white;
     }
-
-   
 
     .headerConnected {
       grid-area: header;
+      position: fixed;
       justify-self: center;
       display: grid;
       grid-template-areas: "logo navBar searchBox";
-      grid-template-columns: 420px 650px 320px;
+      grid-template-columns: 420px 690px 320px;
       justify-items: start;
       column-gap: 0;
-      background: rgba(202, 158, 129, 0.9);
-      height: 120px;
-      border-bottom: 3px rgba(0, 0, 0, 0.6) solid;
-
-      border-radius: 10px;
+      background-color: rgb(211, 140, 59, 0.5);
+      height: 80px;
+      border-bottom: 4px rgba(41, 29, 18, 0.6) solid;
+      border-bottom-right-radius: 75px;
       font-size: 16.5px;
-      max-width: 1390px;
+      max-width: 1430px;
 
       .logoWrapper {
         display: flex;
         grid-area: logo;
         align-items: center;
+        margin-left: 10px;
       }
 
       .navBarWrapper { 
@@ -136,6 +142,10 @@ body {
       grid-area: main1;
     
       .inputFormWrapper {
+        max-width: 475px;
+        background-color: rgba(206, 137, 58, 0.5);
+        border-bottom: 4px rgba(41, 29, 18, 0.6) solid;
+        border-radius: 10px;
         font-size: 16px;
 
         input {
@@ -170,7 +180,6 @@ body {
 
        a {
         color: black;
-
       }
     }
   }

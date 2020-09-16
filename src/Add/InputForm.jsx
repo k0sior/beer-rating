@@ -9,11 +9,7 @@ export class InputForm extends React.Component {
       <div htmlFor='inputFormWrapper' id="inputForm" className="inputFormWrapper">
         <table htmlFor='inputFormTable' 
           cellSpacing="20" 
-          cellPadding="5" 
-          style={{ 
-            maxWidth: 475,
-            backgroundColor: "rgb(211, 140, 59, 0.8)",
-            borderRadius: 10}}>
+          cellPadding="5">
           <tbody>
             <tr>
               <td colSpan="2">
@@ -24,9 +20,15 @@ export class InputForm extends React.Component {
                     id='beerInputName'
                     name='name'
                     required
-                    style={{ width: 378 }}>
+                    style={{ 
+                      width: 378,}}>
                   </input>
-                  <table cellSpacing="0" cellPadding="0" style={{ margin: 0, padding: 0 }}>
+                  <table 
+                  cellSpacing="0" 
+                  cellPadding="0" 
+                  style={{ 
+                    margin: 0, 
+                    padding: 0,}}>
                     <tbody>
                       <tr>
                         <td>
@@ -38,7 +40,9 @@ export class InputForm extends React.Component {
                               id='beerInputType'
                               name='type'
                               required
-                              style={{ width: 180, marginRight: 10 }}>
+                              style={{ 
+                                width: 180,
+                                marginRight: 10,}}>
                             </input>
                           </div>
                         </td>
@@ -51,7 +55,9 @@ export class InputForm extends React.Component {
                               id='beerInputAlcohol'
                               name='alcohol'
                               required
-                              style={{ width: 180, marginRight: 10 }}>
+                              style={{ 
+                                width: 180,
+                                marginRight: 10,}}>
                             </input>
                           </div>
                         </td>
@@ -67,7 +73,9 @@ export class InputForm extends React.Component {
                               id='beerInputExtract'
                               name="extract"
                               required
-                              style={{ width: 114, marginRight: 10 }}>
+                              style={{ 
+                                width: 114, 
+                                marginRight: 10,}}>
                             </input>
                           </div>
                           <div style={{ display: "inline-block" }}>
@@ -77,7 +85,9 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputIbu'
                               name="ibu"
-                              style={{ width: 114, marginRight: 10 }}>
+                              style={{ 
+                                width: 114, 
+                                marginRight: 10,}}>
                             </input>
                           </div>
                           <div style={{ display: "inline-block" }}>
@@ -87,7 +97,9 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputHop'
                               name='hop'
-                              style={{ width: 114, marginRight: 10 }}>
+                              style={{ 
+                                width: 114, 
+                                marginRight: 10,}}>
                             </input>
                           </div>
                         </td>
@@ -102,7 +114,9 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputProducer'
                               name='producer'
-                              style={{ width: 180, marginRight: 10 }}>
+                              style={{ 
+                                width: 180, 
+                                marginRight: 10,}}>
                             </input>
                           </div>
                         </td>
@@ -114,7 +128,9 @@ export class InputForm extends React.Component {
                               type='text'
                               id='beerInputCountry'
                               name='country'
-                              style={{ width: 180, marginRight: 10 }}>
+                              style={{ 
+                                width: 180, 
+                                marginRight: 10,}}>
                             </input>
                           </div>
                         </td>
@@ -129,7 +145,8 @@ export class InputForm extends React.Component {
                     id='beerInputPhoto'
                     name='photo'
                     placeholder="URL do zdjęcia"
-                    style={{ width: 378 }}>
+                    style={{ 
+                      width: 378,}}>
                   </input>
                   <br /> <br />
                   <label htmlFor='beerDecription'>Dodaj opis</label>
@@ -137,7 +154,7 @@ export class InputForm extends React.Component {
                   <textarea
                     style={{ 
                       width: 378, 
-                      height: 200}}
+                      height: 200,}}
                     id='beerInputDecription'
                     name='decription'>
                   </textarea>
@@ -146,7 +163,8 @@ export class InputForm extends React.Component {
             </tr>
 
             <tr>
-              <td style={{ textAlign: "center" }}>
+              <td style={{
+                textAlign: "center",}}>
                 <button type="submit" /*onClick={submitForm()}*/>Prześlij</button>
               </td>
             </tr>

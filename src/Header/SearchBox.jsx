@@ -11,7 +11,9 @@ export class SearchBox extends React.Component {
           <input
             type="text"
             placeholder="Szukaj..."
-            value={searchValue} />
+            value={searchValue}
+            style={{
+              marginRight: 2,}} />
           <button 
             type="button" 
             onClick={searchValueSubmit}>Szukaj</button>
