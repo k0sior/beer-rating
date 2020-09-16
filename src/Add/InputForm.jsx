@@ -6,12 +6,12 @@ export class InputForm extends React.Component {
   render() {
 
     return (
-      <div htmlFor='inputFormWrapper' id="inputForm">
+      <div htmlFor='inputFormWrapper' id="inputForm" className="inputFormWrapper">
         <table htmlFor='inputFormTable' 
           cellSpacing="20" 
           cellPadding="5" 
           style={{ 
-            width: 250, 
+            maxWidth: 475,
             backgroundColor: "rgb(211, 140, 59, 0.8)",
             borderRadius: 10}}>
           <tbody>
@@ -31,7 +31,7 @@ export class InputForm extends React.Component {
                       <tr>
                         <td>
                           <div style={{ display: "inline-block" }}>
-                            <label htmlFor='beerType'>Gatunek</label>
+                            <label htmlFor='beerType'>Gatunek piwa</label>
                             <br />
                             <input
                               type='text'
@@ -147,7 +147,7 @@ export class InputForm extends React.Component {
 
             <tr>
               <td style={{ textAlign: "center" }}>
-                <button type="button" /*onClick={submitForm()}*/>Prześlij</button>
+                <button type="submit" /*onClick={submitForm()}*/>Prześlij</button>
               </td>
             </tr>
           </tbody>

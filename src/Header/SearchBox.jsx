@@ -7,21 +7,14 @@ export class SearchBox extends React.Component {
     const searchValueSubmit = this.props.searchValueSubmit;
     return (
       <div className='searchBoxWrapper' >
-        <form style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-end",}}>
+        <form>
           <input
             type="text"
             placeholder="Szukaj..."
             value={searchValue} />
           <button 
             type="button" 
-            onClick={searchValueSubmit}
-            style={{
-              width: 20,
-              height: 21,
-              marginLeft: 5,}} />
+            onClick={searchValueSubmit}>Szukaj</button>
         </form>
       </div>
     )

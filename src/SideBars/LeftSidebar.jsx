@@ -6,7 +6,7 @@ export class LeftSidebar extends React.Component {
 
     return (
       <div className="leftSidebar">
-        <p>LEFT</p>
+
       </div>
 
     )

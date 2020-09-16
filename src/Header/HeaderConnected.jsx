@@ -10,18 +10,11 @@ export class HeaderConnected extends React.Component {
   render () {
     const addBeerView = this.props.addBeerView
     return(
-      <div className='headerConnected' 
-        style={{
-          gridArea: "header",
-          display: 'flex',
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          minWidth: 1200, }}>
+      <header className='headerConnected'>
         <Title />
         <NavBar addBeerView={addBeerView}/>
         <SearchBox />
-      </div>
+      </header>
     )
   }
 }

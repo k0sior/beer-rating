@@ -1,5 +1,4 @@
 import React from 'react';
-import './css/App.scss';
 import './css/index.scss';
 import { Warning } from "./Warning/Warning.jsx";
 import { InputForm } from './Add/InputForm.jsx';
@@ -13,8 +12,8 @@ export class ConnectedApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      warning : true,
-      addBeer: false,
+      warning : false,
+      addBeer: true,
       main: false,
     }
     this.entryView = this.entryView.bind(this)
@@ -29,7 +28,7 @@ export class ConnectedApp extends React.Component {
 
   addBeerView() {
     this.setState({
-      addBeer: true,
+      addBeer: !this.state.addBeer,
     })
   }
 
@@ -48,7 +47,6 @@ export class ConnectedApp extends React.Component {
         { !warning && <HeaderConnected addBeerView={this.addBeerView} /> }
 
         <div className="mainWrapper">
-          <br/>
           { this.state.addBeer && <InputForm /> }
           { }
         </div>

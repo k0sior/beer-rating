@@ -6,7 +6,6 @@ export class RightSidebar extends React.Component {
 
     return (
       <div className="rightSidebar">
-        <p>RIGHT</p>
       </div>
 
     )
