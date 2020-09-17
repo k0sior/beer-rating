@@ -7,6 +7,7 @@ import { LeftSidebar } from './SideBars/LeftSidebar.jsx';
 import { RightSidebar } from './SideBars/RightSidebar.jsx';
 import { Footer } from './Footer/Footer.jsx';
 //main content
+import { Catalog } from "./Catalog/Catalog.jsx";
 import { Contact } from "./Contact/Contact.jsx";
 import { InputForm } from './Add/InputForm.jsx';
 
@@ -16,54 +17,37 @@ export class ConnectedApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      warning : false,
-      view: "main"
+      view: "catalog"
     }
-    this.entryView = this.entryView.bind(this);
-    this.contactView = this.contactView.bind(this);
-    this.addBeerView = this.addBeerView.bind(this);
+
+    this.changeView = this.changeView.bind(this)
   }
 
-  entryView() {
+  changeView(tab) {
     this.setState({
-      warning: false,
-    })
-  }
-
-  mainPageView() {
-    this.setState({
-      view: "main"
-    })
-  }
-
-  contactView() {
-    this.setState({
-      view: "contact"
-    })
-  }
-
-  addBeerView() {
-    this.setState({
-      view: "addBeer",
+      view: tab
     })
   }
 
   render () {
-    const warning = this.state.warning;
     const view = this.state.view;
-
     return (
       <div className="connectedApp">
-        { warning && <Warning entryView={this.entryView} />}
-        { !warning && <HeaderConnected            
-          contactView={this.contactView}
-          addBeerView={this.addBeerView}/> 
-          }
-        { !warning && <LeftSidebar />}
-        { !warning && <RightSidebar />}
-        { !warning && <Footer />}
+        { view === "" && <Warning entryView={() => this.changeView("main")} />}
+  
+        { view !== "" && <HeaderConnected
+          mainTabView={() => this.changeView("contact")}
+          catalogView={() => this.changeView("catalog")}
+          ratingView={() => this.changeView("rating")}
+          contactView={() => this.changeView("contact")}
+          addBeerView={() => this.changeView("addBeer")}
+        />}
+        { view !== "" && <LeftSidebar />}
+        { view !== "" && <RightSidebar />}
+        { view !== "" && <Footer />}
 
         <div className="mainWrapper">
+          { view === "catalog" && <Catalog />}
           { view === "addBeer" && <InputForm /> }
           { view === "contact" && <Contact /> }
         </div>

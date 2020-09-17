@@ -91,7 +91,7 @@ export class InputForm extends React.Component {
                             </input>
                           </div>
                           <div style={{ display: "inline-block" }}>
-                            <label htmlFor='beerHop'>Gatunek chmielu</label>
+                            <label htmlFor='beerHop'>Rodzaj chmielu</label>
                             <br />
                             <input
                               type='text'
