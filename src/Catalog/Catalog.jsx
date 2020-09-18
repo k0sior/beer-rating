@@ -1,4 +1,3 @@
-import { ReactComponent } from '*.svg';
 import React from 'react'
 
 export class Catalog extends React.Component {
@@ -7,7 +6,7 @@ export class Catalog extends React.Component {
     return (
       <div className="catalogWrapper">
 
-
+      <p> catalog </p>
       </div>
     )
   }

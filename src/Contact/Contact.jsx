@@ -3,6 +3,7 @@ import React from 'react'
 export class Contact extends React.Component {
 
   render () {
+    const sendMessage = this.props.sendMessage;
     return(
       <div className="contactWrapper">
         <form className="contactForm">
@@ -37,7 +38,7 @@ export class Contact extends React.Component {
               height: 200,}}> 
           </textarea>
           <br/>
-          <button type="submit" id="contactMessageButton">Prześlij</button>
+          <button type="button" id="contactMessageButton" onClick={sendMessage}>Prześlij</button>
         </form>
       </div>
     )

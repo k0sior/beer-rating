@@ -1,3 +1,7 @@
+$mainBack: rgba(206, 137, 58, 0.5);
+$mainBorder: 2px black solid;
+$bottomBorder: 4px rgba(41, 29, 18, 0.6) solid;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,12 +20,11 @@ body {
     margin: 0;
     display: grid;
     grid-template-areas:
-      "header header header header" 
-      "leftSide main1 main2 rightSide"
-      "footer footer footer footer";
-    grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: 150px 800px auto 200px;
-    justify-items: stretch;
+      "header header  header" 
+      "leftSide main rightSide"
+      "footer footer footer";
+    grid-template-columns: 7% 86 7%;
+    grid-template-rows: 150px auto auto 200px;
     font-family: monospace;
 
     .warningWrapper {
@@ -29,24 +32,18 @@ body {
       display: flex;
       flex-direction: column;
       justify-self: left;
-      align-content: start ;
       justify-content: center;
       text-align: center;
       font-size: 18px;
-      background-color: rgba(206, 137, 58, 0.5);
-      border: 2px black solid;
+      background: $mainBack;
+      border: $mainBorder;
       border-radius: 10px;
       max-width: 420px;
       min-width: 160px;
       max-height: 200px;
 
-
-      button:visited{
-        background-color: white;
-      }
-      button:hover {
-        background-color: white;
-        margin:0px;
+      button {
+        align-self: center;
       }
     }
 
@@ -76,7 +73,7 @@ body {
     }
     button:hover {
       background-color: white;
-      transition-duration: 0.5s;
+      transition-duration: 0.2s;
       margin-top: 5px;
     }
 
@@ -84,7 +81,7 @@ body {
       background: rgb(220, 220, 220);
       border-radius: 7px;
       height: 20px;
-      transition-duration: 0.1s;
+      transition-duration: 0.2s;
       outline: none;
       font-family: monospace;
 
@@ -97,10 +94,10 @@ body {
     textarea {
       background: rgb(220, 220, 220);
       border-radius: 7px;
-      border: 2px solid black;
+      border: $mainBorder;
       resize: none;
       outline: none;
-      transition-duration: 0.1s;
+      transition-duration: 0.2s;
       font-family: monospace;
 
     }
@@ -118,9 +115,9 @@ body {
       grid-template-columns: 420px 690px 320px;
       justify-items: start;
       column-gap: 0;
-      background-color: rgb(211, 140, 59, 0.5);
+      background: $mainBack;
       height: 80px;
-      border-bottom: 4px rgba(41, 29, 18, 0.6) solid;
+      border-bottom: $bottomBorder;
       border-bottom-right-radius: 75px;
       font-size: 16.5px;
       max-width: 1430px;
@@ -162,14 +159,21 @@ body {
       }
     }
 
-    .mainWrapper {
+    .addWrapper {
       justify-self: center;
-      grid-area: main1;
+      display: grid;
+      grid-area: main;
+      grid-template-areas: "main1 main2" ;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      column-gap: 20px;
     
       .inputFormWrapper {
+        grid-area: main1;
+        justify-self: left;
         max-width: 475px;
-        background-color: rgba(206, 137, 58, 0.5);
-        border-bottom: 4px rgba(41, 29, 18, 0.6) solid;
+        background-color: $mainBack;
+        border-bottom: $bottomBorder;
         border-radius: 10px;
         font-size: 16px;
 
@@ -178,21 +182,56 @@ body {
         }
         
         button {
-          margin: 0 0 0 0;
+          margin: 0;
         }
       }
 
-      .contactWrapper {
-        max-width: 475px;
-        background-color: rgba(206, 137, 58, 0.5);
-        border-bottom: 4px rgba(41, 29, 18, 0.6) solid;
-        border-radius: 10px;
-        font-size: 16px;
-        padding: 20px
+      .catalogPreview {
+        grid-area: main2;
+        justify-self: right;
 
+        fieldset { 
+          width: 400px;
+          background: $mainBack;
+          border: $mainBorder;
+          border-radius: 5px;
 
+          legend {
+            font-size: 30px;
+            background: rgb(220, 220, 220);
+            border: $mainBorder;
+            border-radius: 5px;
+          }
+        }
+        div, table {
+          background: $mainBack;          
+          border: $mainBorder;
+          border-radius: 5px;
+          font-size: 16px;
+
+          td, th{
+            border: 1px solid black;
+            background: rgb(220, 220, 220);
+          }
+        }
       }
-    } 
+     } 
+
+    .contactWrapper {
+      grid-area: main;
+      justify-self: center;
+      max-width: 475px;
+      max-height: 390px;
+      background: $mainBack;
+      border-bottom: $bottomBorder;
+      border-radius: 10px;
+      font-size: 16px;
+      padding: 20px;
+
+      .contactForm {
+        max-height: 346px;
+      }
+    }
 
     .leftSidebar {
       grid-area: leftSide;

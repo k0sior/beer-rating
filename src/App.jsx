@@ -8,16 +8,17 @@ import { RightSidebar } from './SideBars/RightSidebar.jsx';
 import { Footer } from './Footer/Footer.jsx';
 //main content
 import { Catalog } from "./Catalog/Catalog.jsx";
+
 import { Contact } from "./Contact/Contact.jsx";
 import { InputForm } from './Add/InputForm.jsx';
-
+import { CatalogPreview } from "./Add/CatalogPreview.jsx"
 
 export class ConnectedApp extends React.Component {
   
   constructor(props) {
     super(props)
     this.state = {
-      view: "catalog"
+      view: "addBeer"
     }
 
     this.changeView = this.changeView.bind(this)
@@ -45,11 +46,11 @@ export class ConnectedApp extends React.Component {
         { view !== "" && <LeftSidebar />}
         { view !== "" && <RightSidebar />}
         { view !== "" && <Footer />}
-
-        <div className="mainWrapper">
-          { view === "catalog" && <Catalog />}
-          { view === "addBeer" && <InputForm /> }
-          { view === "contact" && <Contact /> }
+        { view === "contact" && <Contact /> }
+        { view === "catalog" && <Catalog />}
+        <div className="addWrapper">     
+          { view === "addBeer" && <InputForm previewForm={console.log("previewForm")} /> }
+          { view === "addBeer" && <CatalogPreview submitForm={console.log("submitForm")} />}
         </div>
       </div>
     );
