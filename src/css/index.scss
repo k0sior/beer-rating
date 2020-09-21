@@ -25,7 +25,7 @@ body {
       "footer footer footer";
     grid-template-columns: 7% 90% 7%;
     grid-template-rows: 150px auto auto 200px;
-    font-family: monospace;
+
 
     .warningWrapper {
       grid-area: main1;
@@ -65,7 +65,7 @@ body {
       transition-duration: 0.5s;
       margin-right: 3px;
       outline: none;
-      font-family: monospace;
+
     }
 
     button:visited {
@@ -83,7 +83,7 @@ body {
       height: 20px;
       transition-duration: 0.2s;
       outline: none;
-      font-family: monospace;
+
 
     }
 
@@ -98,8 +98,7 @@ body {
       resize: none;
       outline: none;
       transition-duration: 0.2s;
-      font-family: monospace;
-
+      
     }
     
     textarea:focus{
@@ -192,21 +191,22 @@ body {
       grid-area: main;
       grid-template-areas:"col1 col2";
       grid-template-columns: 700px 700px;
-      grid-template-rows: auto auto;   
+      grid-template-rows: auto auto;
+      column-gap: 50px; 
+      row-gap: 50px;
+        
       
-      .catalogElement {        
+      .catalogElementWrapper {        
         display: grid;
         border-bottom: $bottomBorder;
         border-radius: 5px;
+        background: $mainBack;
+        padding: 10px 5px 0 0;
+        width: 700px;
 
-        .catalogFieldset {
-          display: grid;
-          grid-template-areas:"info photo" "desc desc";
-          grid-template-columns: auto auto;
-          grid-template-rows: auto auto;  
-          background: $mainBack;
+        fieldset {
           border: none;
-        
+
           legend {
             font-size: 30px;
             background: rgb(220, 220, 220);
@@ -215,17 +215,54 @@ body {
           }
         }
 
+        .catalogElement {
+          display: grid;
+          grid-template-areas:"info photo" "desc photo";
+          grid-template-columns: 450px 250px;
+          grid-template-rows: auto auto; 
+          border: none;
+          
+          
+          #catalog-photo{
 
-        table {
-          grid-area: info;
-          background: $mainBack;          
-          border: $mainBorder;
-          border-radius: 5px;
-          font-size: 16px;
+            img {
+              grid-area: photo;
+              width: auto;
+              max-height: 350px;
+              border-radius: 5px;
+              border: $mainBorder
+            }
+          }
 
-          td, th{
-            border: 1px solid black;
-            background: rgb(220, 220, 220);
+          table {
+            grid-area: info;
+            border-radius: 5px;
+            font-size: 16px;
+            max-width: 400px;
+
+            th{
+              text-align: left;
+              width: 100px;
+              color: rgb(82, 81, 81);
+              background: $mainBack;
+              border-radius: 5px;
+            }
+            td {
+              font-size: 17px;
+              background: $mainBack;
+              border-radius: 5px;
+              text-align: center;
+
+            };
+          }
+
+          #catalog-description {
+            grid-area: desc;
+            margin-top: 10px;
+            font-size: 16px;
+            background: $mainBack;
+            border-radius: 5px;
+
           }
         }
       }

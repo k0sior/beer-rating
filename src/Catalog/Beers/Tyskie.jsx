@@ -1,13 +1,13 @@
 import React from 'react'
 
-export class Perla extends React.Component {
+export class Tyskie extends React.Component {
 
   render() {
 
     return (
       <div className="catalogElementWrapper">
         <fieldset>
-          <legend><span id="catalog-name">Perła Chmielowa</span></legend>
+          <legend><span id="catalog-name">Tyskie</span></legend>
 
           <div className="catalogElement">
             <table>

@@ -63,7 +63,6 @@ export class ConnectedApp extends React.Component {
         { view !== "" && <Footer />}
         { view === "contact" && <Contact /> }
         { view === "catalog" && <Catalog />}
-
         <div className="addWrapper">     
           { view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()}/> }
         </div>
