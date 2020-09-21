@@ -1,12 +1,12 @@
 import React from 'react'
+import { Perla } from "./Beers/Perla.jsx"
 
 export class Catalog extends React.Component {
 
   render () {
     return (
       <div className="catalogWrapper">
-
-      <p> catalog </p>
+        <Perla />
       </div>
     )
   }

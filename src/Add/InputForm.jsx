@@ -4,7 +4,7 @@ import React from 'react'
 export class InputForm extends React.Component {
 
   render() {
-    const previewForm = this.props.previewForm;
+    const submitForm = this.props.submitForm;
     return (
       <div htmlFor='inputFormWrapper' id="inputForm" className="inputFormWrapper">
         <table htmlFor='inputFormTable' 
@@ -165,7 +165,7 @@ export class InputForm extends React.Component {
             <tr>
               <td style={{
                 textAlign: "center",}}>
-                <button type="button" onClick={previewForm}>Prześlij</button>
+                <button type="submit" id="submitFormButton" onClick={submitForm}>Prześlij</button>
               </td>
             </tr>
           </tbody>

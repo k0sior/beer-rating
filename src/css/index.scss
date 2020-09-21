@@ -23,7 +23,7 @@ body {
       "header header  header" 
       "leftSide main rightSide"
       "footer footer footer";
-    grid-template-columns: 7% 86 7%;
+    grid-template-columns: 7% 90% 7%;
     grid-template-rows: 150px auto auto 200px;
     font-family: monospace;
 
@@ -185,17 +185,28 @@ body {
           margin: 0;
         }
       }
+    }
 
-      .catalogPreview {
-        grid-area: main2;
-        justify-self: right;
+    .catalogWrapper {
+      display: grid;
+      grid-area: main;
+      grid-template-areas:"col1 col2";
+      grid-template-columns: 700px 700px;
+      grid-template-rows: auto auto;   
+      
+      .catalogElement {        
+        display: grid;
+        border-bottom: $bottomBorder;
+        border-radius: 5px;
 
-        fieldset { 
-          width: 400px;
+        .catalogFieldset {
+          display: grid;
+          grid-template-areas:"info photo" "desc desc";
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto;  
           background: $mainBack;
-          border: $mainBorder;
-          border-radius: 5px;
-
+          border: none;
+        
           legend {
             font-size: 30px;
             background: rgb(220, 220, 220);
@@ -203,7 +214,10 @@ body {
             border-radius: 5px;
           }
         }
-        div, table {
+
+
+        table {
+          grid-area: info;
           background: $mainBack;          
           border: $mainBorder;
           border-radius: 5px;
@@ -215,7 +229,8 @@ body {
           }
         }
       }
-     } 
+    }
+  
 
     .contactWrapper {
       grid-area: main;
