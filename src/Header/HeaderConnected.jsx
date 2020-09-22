@@ -6,7 +6,12 @@ import { Title } from "./Title.jsx"
 
 
 export class HeaderConnected extends React.Component {
-
+  constructor (props) {
+    super (props);
+    this.state = {
+      position: 0,
+    }
+  }
   render () {
     const mainPageView = this.props.mainPageView;
     const catalogView = this.props.catalogView;

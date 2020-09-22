@@ -18,14 +18,16 @@ export class ConnectedApp extends React.Component {
   
   constructor(props) {
     super(props)
+    this.ref = React.createRef();
     this.state = {
-      view: "catalog"
+      view: "catalog",
+      scrollTop : 0,
     }
     this.changeView = this.changeView.bind(this)
   }
 
   componentDidMount(){
-
+    
   }
 
   componentDidUpdate() {
@@ -43,14 +45,12 @@ export class ConnectedApp extends React.Component {
   }
 
 
-
   render () {
     const view = this.state.view;
     return (
       <div className="connectedApp">
         { view === "" && <Warning entryView={() => this.changeView("main")} />}
-  
-        { view !== "" && <HeaderConnected
+        { view !== "" && <HeaderConnected onScroll={this.onScroll}
           mainTabView={() => this.changeView("main")}
           catalogView={() => this.changeView("catalog")}
           ratingView={() => this.changeView("rating")}

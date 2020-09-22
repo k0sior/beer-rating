@@ -24,10 +24,7 @@ export class Tyskie extends React.Component {
                   <th>Eks. </th>
                   <td><span id="catalog-extract">12.2%</span></td>
                 </tr>
-                <tr>
-                <th>IBU </th>
-                  <td><span id="catalog-ibu">IBU</span></td>
-                </tr>
+     
                 <tr>
                   <th>Chmiele </th>
                   <td><span id="catalog-hop">Chmiel lubelski</span></td>
@@ -40,15 +37,22 @@ export class Tyskie extends React.Component {
                   <th>Kraj pochodzenia </th>
                   <td><span id="catalog-country">Polska</span></td>
                 </tr>
-              <div id="catalog-description">
-                Fajny opisik
-              </div>
+                <br/>
+                <br/>
+                <tr className="starRating">
+                  <th >3.5/5.0</th>
+                  <td>
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                  </td>
+                </tr>
               </tbody>
             </table>
-        <div id="catalog-photo">
-          <img src="https://www.tradeunderbond.com/img/post/image_1530792667.jpg" alt="pifko"></img>
-        </div>
-
+            <div id="catalog-photo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Butelka_Tyskie_bez_cienia.png/162px-Butelka_Tyskie_bez_cienia.png" alt="pifko"></img>
+            </div>
+            <div id="catalog-description">
+              Fajny opisik a nie bieda jakaś
+              </div>
           </div>
         </fieldset>
 

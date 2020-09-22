@@ -40,13 +40,19 @@ export class Perla extends React.Component {
                   <th>Kraj pochodzenia </th>
                   <td><span id="catalog-country">Polska</span></td>
                 </tr>
-              <div id="catalog-description">
-                Fajny opisik
-              </div>
+                <tr><br/></tr>
+                <tr><br/></tr>
+                <tr>
+                  <th>Oceń</th>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
+            <div id="catalog-description">
+                Fajny opisik blebl lblblblsad sdldsl lslsl adas asdas asa aasas as a aw a  ssssass asd as d asd as  asddddddddd assssssssssssssssss asssssssssss
+              </div>
         <div id="catalog-photo">
-          <img src="https://www.tradeunderbond.com/img/post/image_1530792667.jpg" alt="pifko"></img>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdp5GpEKUkJMz7Xhz8K3WTewCm5IZWPrLglw&usqp=CAU" alt="pifko"></img>
         </div>
 
           </div>

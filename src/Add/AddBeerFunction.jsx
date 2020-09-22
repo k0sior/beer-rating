@@ -16,3 +16,4 @@ export function addBeerToCatalog() {
 }
 
 console.log(addBeerToCatalog());
+
