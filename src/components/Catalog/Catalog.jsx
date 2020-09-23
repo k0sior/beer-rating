@@ -1,6 +1,6 @@
 import React from 'react'
-import { Perla } from "./Beers/Perla.jsx"
-import { Tyskie } from "./Beers/Tyskie.jsx"
+
+import { Perla, Tyskie } from "./Beers.jsx"
 
 // test version
 
@@ -11,7 +11,6 @@ export class Catalog extends React.Component {
       <div className="catalogWrapper">
         <Perla />
         <Tyskie />
-        <Perla />
         <Perla />
         <Tyskie/>
       </div>

@@ -1,17 +1,17 @@
 import React from 'react';
 import './css/index.scss';
 //displayed outside main content
-import { Warning } from "./Warning/Warning.jsx";
-import { HeaderConnected } from './Header/HeaderConnected.jsx';
-import { LeftSidebar } from './SideBars/LeftSidebar.jsx';
-import { RightSidebar } from './SideBars/RightSidebar.jsx';
-import { Footer } from './Footer/Footer.jsx';
+import { Warning } from "./components/Warning/Warning.jsx";
+import { HeaderConnected } from './components/Header/HeaderConnected.jsx';
+import { LeftSidebar } from './components/SideBars/LeftSidebar.jsx';
+import { RightSidebar } from './components/SideBars/RightSidebar.jsx';
+import { Footer } from './components/Footer/Footer.jsx';
 //main content
-import { Catalog } from "./Catalog/Catalog.jsx";
-import { Contact } from "./Contact/Contact.jsx";
-import { InputForm } from './Add/InputForm.jsx';
+import { Catalog } from "./components/Catalog/Catalog.jsx";
+import { Contact } from "./components/Contact/Contact.jsx";
+import { InputForm } from './components/Add/InputForm.jsx';
 // functions 
-import { addBeerToCatalog } from "./Add/AddBeerFunction.jsx"
+import { addBeerToCatalog } from "./components/Add/AddBeerFunction.jsx"
 
 
 export class ConnectedApp extends React.Component {
@@ -20,7 +20,7 @@ export class ConnectedApp extends React.Component {
     super(props)
     this.ref = React.createRef();
     this.state = {
-      view: "catalog",
+      view: "addBeer",
       scrollTop : 0,
     }
     this.changeView = this.changeView.bind(this)
