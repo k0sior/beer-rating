@@ -4,7 +4,6 @@ export class SearchBox extends React.Component {
 
   render() {
     const searchValue = this.props.searchValue;
-    const searchValueSubmit = this.props.searchValueSubmit;
     return (
       <div className='searchBoxWrapper' >
         <form>
@@ -13,10 +12,7 @@ export class SearchBox extends React.Component {
             placeholder="Szukaj..."
             value={searchValue}
             style={{
-              marginRight: 2,}} />
-          <button 
-            type="button" 
-            onClick={searchValueSubmit}>Szukaj</button>
+              marginRight: 40,}} />
         </form>
       </div>
     )

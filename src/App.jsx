@@ -20,7 +20,7 @@ export class ConnectedApp extends React.Component {
     super(props)
     this.ref = React.createRef();
     this.state = {
-      view: "addBeer",
+      view: "catalog",
       scrollTop : 0,
     }
     this.changeView = this.changeView.bind(this)

@@ -1,47 +1,60 @@
 import React from 'react'
 
-export class CatalogPreview extends React.Component {
+export default class CatalogPreview extends React.Component {
 
   render() {
 
     return (
-      <div className="catalogPreview">
-        <h2>Preview</h2>
+      <div className="catalogElementWrapper">
         <fieldset>
-          <legend><span id="addBeer-name">Name</span></legend>
-          <table>
-            <tbody>
-              <tr>
-                <td><span id="addBeer-type">Type</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-alcohol">%</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-extract">Ekstarkt</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-ibu">IBU</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-hop">chmiel</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-producer">Producent</span></td>
-              </tr>
-              <tr>
-                <td><span id="addBeer-country">Kraj</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div id="addBeer-photo"> image
-              <img src="" alt="pifko"></img>
-          </div>
-          <div id="addBeer-description">
-            opis
-            </div>
+          <legend><span id="catalog-name">Nazwa</span></legend>
 
+          <div className="catalogElement">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Typ </th>
+                  <td><span id="catalog-type">TYP</span></td>
+                </tr>
+                <tr>
+                  <th>Alk. </th>
+                  <td><span id="catalog-alcohol">ALK</span></td>
+                </tr>
+                <tr>
+                  <th>Eks. </th>
+                  <td><span id="catalog-extract">EKS</span></td>
+                </tr>
+                <tr>
+                <th>IBU </th>
+                  <td><span id="catalog-ibu">IBU</span></td>
+                </tr>
+                <tr>
+                  <th>Chmiele </th>
+                  <td><span id="catalog-hop">HOP</span></td>
+                </tr>
+                <tr>
+                  <th>Producent/ Importer </th>
+                  <td><span id="catalog-producer">PROD</span></td>
+                </tr>
+                <tr>
+                  <th>Kraj pochodzenia </th>
+                  <td><span id="catalog-country">KRAJ</span></td>
+                </tr>
+
+                <tr>
+                  <th>Oceń</th>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="catalog-description">OPIS - OPIS </div>
+        <div id="catalog-photo">
+          <img src="" alt="pifko"></img>
+        </div>
+
+          </div>
         </fieldset>
+
       </div>
     )
   }

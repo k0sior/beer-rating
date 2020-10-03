@@ -116,11 +116,9 @@ body {
 
     .headerConnected {
       grid-area: header;
+      display: flex;
       position: fixed;
       justify-self: center;
-      display: grid;
-      grid-template-areas: "logo navBar searchBox";
-      grid-template-columns: 420px 690px 320px;
       justify-items: start;
       column-gap: 0;
       background: $mainBack;
@@ -142,6 +140,7 @@ body {
         display: flex;
         grid-area: navBar;
         align-items: center;
+        max-width: 650px;
 
         ul {
           list-style-type: none;
@@ -154,13 +153,8 @@ body {
       .searchBoxWrapper {
         display: flex;
         grid-area: searchBox;
-        justify-content: flex-start;
         align-items: center;
-        
-        button {
-          margin: 0 20px 0 0;
-        }
-
+  
         input {
           height: 40px;
           font-size: 18px;
@@ -319,6 +313,19 @@ body {
 
        a {
         color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+
+  .headerConnected {
+    .logoWrapper {
+      display: none;
+
+      img {
+        display:none;
       }
     }
   }
