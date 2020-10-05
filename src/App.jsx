@@ -7,7 +7,7 @@ import { LeftSidebar } from './components/SideBars/LeftSidebar.jsx';
 import { RightSidebar } from './components/SideBars/RightSidebar.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
 //main content
-import { Catalog } from "./components/Catalog/Catalog.jsx";
+import { BeerBase } from "./components/Catalog/BeerBase.jsx";
 import { Contact } from "./components/Contact/Contact.jsx";
 import { InputForm } from './components/Add/InputForm.jsx';
 // functions 
@@ -22,20 +22,9 @@ export class ConnectedApp extends React.Component {
     this.state = {
       view: "catalog",
       scrollTop : 0,
+      search: "",
     }
     this.changeView = this.changeView.bind(this)
-  }
-
-  componentDidMount(){
-    
-  }
-
-  componentDidUpdate() {
-
-  }
-
-  handleChange(e) {
-    
   }
   
   changeView(tab) {
@@ -47,8 +36,10 @@ export class ConnectedApp extends React.Component {
 
   render () {
     const view = this.state.view;
+
     return (
       <div className="connectedApp">
+        
         { view === "" && <Warning entryView={() => this.changeView("main")} />}
         { view !== "" && <HeaderConnected onScroll={this.onScroll}
           mainTabView={() => this.changeView("main")}
@@ -62,7 +53,9 @@ export class ConnectedApp extends React.Component {
         { view !== "" && <RightSidebar />}
         { view !== "" && <Footer />}
         { view === "contact" && <Contact /> }
-        { view === "catalog" && <Catalog />}
+        <div className="catalogWrapper">
+          { view === "catalog" && <BeerBase />}
+        </div>
         <div className="addWrapper">     
           { view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()}/> }
         </div>

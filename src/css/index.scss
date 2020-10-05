@@ -25,7 +25,7 @@ body {
       "leftSide main rightSide"
       "footer footer footer";
     grid-template-columns: 7% 86% 7%;
-    grid-template-rows: 150px auto auto 200px;
+    grid-template-rows: 110px auto auto 200px;
 
 
     .warningWrapper {
@@ -149,18 +149,8 @@ body {
           min-width: 650px;
         }
       }
-    
-      .searchBoxWrapper {
-        display: flex;
-        grid-area: searchBox;
-        align-items: center;
-  
-        input {
-          height: 40px;
-          font-size: 18px;
-        }
-      }
     }
+     
 
     .addWrapper {
       justify-self: center;
@@ -191,6 +181,21 @@ body {
     }
 
     .catalogWrapper {
+      grid-area: main;
+
+      .searchBoxWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+  
+        input {
+          height: 40px;
+          font-size: 18px;
+        }
+      }
+
+    .beerBase {
       display: grid;
       grid-area: main;
       grid-template-areas:"col1 col2";
@@ -199,7 +204,8 @@ body {
       column-gap: 50px; 
       row-gap: 50px;
         
-      
+
+    
       .catalogElementWrapper {        
         display: grid;
         background: $mainBack;
@@ -281,7 +287,7 @@ body {
         }
       }
     }
-  
+  }
 
     .contactWrapper {
       grid-area: main;
@@ -310,6 +316,7 @@ body {
     .footerWrapper{
       grid-area: footer;
       text-align: center;
+      margin-top: 4rem;
 
        a {
         color: black;

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { NavBar } from "./NavBar.jsx"
-import { SearchBox } from "./SearchBox.jsx"
 import { Title } from "./Title.jsx"
 
 
@@ -27,7 +26,6 @@ export class HeaderConnected extends React.Component {
           higestRatedView={higestRatedView}
           contactView={contactView}
           addBeerView={addBeerView}/>
-        <SearchBox />
       </header>
     )
   }
