@@ -17,7 +17,8 @@ export class BeerBase extends React.Component {
 
     const search = this.state.search;
     const filteredBeers = base.filter(beer => {
-      return beer.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || beer.type.toLowerCase().indexOf(search.toLowerCase()) !== -1
+      return beer.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 
+      || beer.type.toLowerCase().indexOf(search.toLowerCase()) !== -1
     })
 
     return (
