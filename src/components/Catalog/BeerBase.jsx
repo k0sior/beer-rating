@@ -1,5 +1,6 @@
 import React from 'react'
 import { base } from "./data.js"
+import { StarRating } from "./Rating.jsx"
 
 export class BeerBase extends React.Component {
 
@@ -78,6 +79,12 @@ export class BeerBase extends React.Component {
                                 <th>Kraj pochodzenia </th>
                                 <td><span id="catalog-country">{data.country}</span></td>
                               </tr>}
+                              <br/>
+                            {<tr>
+                              <th> Oceń </th>
+                              <td> <StarRating /> </td>
+                            </tr>
+                            }
                           </tbody>
                         </table>
                         <div id="catalog-description">

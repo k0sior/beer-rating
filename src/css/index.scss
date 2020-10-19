@@ -24,7 +24,7 @@ body {
       "header header  header" 
       "leftSide main rightSide"
       "footer footer footer";
-    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-columns: 10vw auto auto;
     grid-template-rows: 110px auto auto 200px;
 
 
@@ -66,7 +66,7 @@ body {
       transition-duration: 0.5s;
     }
     button { 
-      background: rgb(220, 220, 220);
+      background: #dcdcdc;
       border-radius: 5px;
       font-size: 16.5px;
       width: auto;
@@ -148,8 +148,7 @@ body {
           min-width: 650px;
         }
       }
-    }
-     
+    }     
 
     .addWrapper {
       justify-self: center;
@@ -203,8 +202,15 @@ body {
       column-gap: 50px; 
       row-gap: 50px;
         
+      input[type="radio"] {
+        display: none;
+      }
+      
+      .star {
+        transition-duration: 200ms;
+        cursor: pointer;
+      }
 
-    
       .catalogElementWrapper {        
         display: grid;
         background: $mainBack;
@@ -231,8 +237,7 @@ body {
           grid-template-columns: 420px 250px;
           grid-template-rows: auto auto; 
           border: none;
-          
-          
+
           #catalog-photo{
             display: flex;
             justify-content: center;
