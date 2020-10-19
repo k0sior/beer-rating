@@ -117,8 +117,7 @@ body {
     .headerConnected {
       grid-area: header;
       display: flex;
-      position: fixed;
-      justify-self: center;
+      justify-self: self-start;
       justify-items: start;
       column-gap: 0;
       background: $mainBack;

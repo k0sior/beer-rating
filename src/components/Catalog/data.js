@@ -35,5 +35,16 @@ export const base = [
     photo: "",
     description: "Harnaś - sam mjut",
   },
-
+  {
+    name: "asd",
+    type: "Pils",
+    alc: "6.0%",
+    ext: "12.2%",
+    ibu: "",
+    hop: "słabiutki",
+    prod: "",
+    country: "",
+    photo: "",
+    description: "Harnaś - sam mjut",
+  },
 ]

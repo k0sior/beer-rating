@@ -5,18 +5,14 @@ import { Title } from "./Title.jsx"
 
 
 export class HeaderConnected extends React.Component {
-  constructor (props) {
-    super (props);
-    this.state = {
-      position: 0,
-    }
-  }
+
   render () {
     const mainPageView = this.props.mainPageView;
     const catalogView = this.props.catalogView;
     const higestRatedView = this.props.higestRatedView;
     const contactView = this.props.contactView;
     const addBeerView = this.props.addBeerView;
+    
     return(
       <header className='headerConnected'>
         <Title />
