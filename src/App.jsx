@@ -1,5 +1,7 @@
 import React from 'react';
 import './css/index.scss';
+import { CSSTransition } from 'react-transition-group'
+ 
 //displayed outside main content
 import { Warning } from "./components/Warning/Warning.jsx";
 import { HeaderConnected } from './components/Header/HeaderConnected.jsx';

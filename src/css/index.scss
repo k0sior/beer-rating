@@ -24,8 +24,9 @@ body {
       "header header  header" 
       "leftSide main rightSide"
       "footer footer footer";
-    grid-template-columns: 10vw auto auto;
+    grid-template-columns: 10vw auto 10vw;
     grid-template-rows: 110px auto auto 200px;
+    transition-duration: 300ms;
 
 
     .warningWrapper {
@@ -83,7 +84,6 @@ body {
     button:hover {
       background-color: white;
       transition-duration: 0.2s;
-      margin-top: 5px;
     }
 
     input {
@@ -92,8 +92,6 @@ body {
       height: 20px;
       transition-duration: 0.2s;
       outline: none;
-
-
     }
 
     input:focus{
@@ -127,6 +125,7 @@ body {
       font-size: 16.5px;
       max-width: 1430px;
       transition-duration: 0.3s;
+      
 
       .logoWrapper {
         display: flex;

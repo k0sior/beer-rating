@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export class InputForm extends React.Component {
 
   render() {
