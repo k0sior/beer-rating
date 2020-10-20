@@ -22,7 +22,7 @@ export class ConnectedApp extends React.Component {
     super(props)
     this.ref = React.createRef();
     this.state = {
-      view: "catalog",
+      view: "",
       scrollTop : 0,
       search: "",
     }
