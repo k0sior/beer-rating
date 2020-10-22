@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/index.scss';
-import { CSSTransition } from 'react-transition-group'
+// import { CSSTransition } from 'react-transition-group'
  
 //displayed outside main content
 import { Warning } from "./components/Warning/Warning.jsx";
@@ -9,6 +9,7 @@ import { LeftSidebar } from './components/SideBars/LeftSidebar.jsx';
 import { RightSidebar } from './components/SideBars/RightSidebar.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
 //main content
+import { MainView } from "./components/Main/Main.jsx"
 import { BeerBase } from "./components/Catalog/BeerBase.jsx";
 import { Contact } from "./components/Contact/Contact.jsx";
 import { InputForm } from './components/Add/InputForm.jsx';
@@ -34,6 +35,7 @@ export class ConnectedApp extends React.Component {
       view: tab
     })
   }
+  
 
 
   render () {
@@ -41,27 +43,29 @@ export class ConnectedApp extends React.Component {
 
     return (
       <div className="connectedApp">
-        
+
         { view === "" && <Warning entryView={() => this.changeView("main")} />}
+
+        { view !== "" && <LeftSidebar /> && <RightSidebar /> && <Footer />}
+
+        { view === "main" && <MainView /> }
         { view !== "" && <HeaderConnected onScroll={this.onScroll}
-          mainTabView={() => this.changeView("main")}
+          mainView={() => this.changeView("main")}
           catalogView={() => this.changeView("catalog")}
           ratingView={() => this.changeView("rating")}
           contactView={() => this.changeView("contact")}
           addBeerView={() => this.changeView("addBeer")}
-        />}
-
-        { view !== "" && <LeftSidebar />}
-        { view !== "" && <RightSidebar />}
-        { view !== "" && <Footer />}
+        />}  
         { view === "contact" && <Contact /> }
+
         <div className="catalogWrapper">
           { view === "catalog" && <BeerBase />}
         </div>
+
         <div className="addWrapper">     
           { view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()}/> }
-        </div>
-        
+        </div> 
+
       </div>
     );
   } 

@@ -7,7 +7,7 @@ import { Title } from "./Title.jsx"
 export class HeaderConnected extends React.Component {
 
   render () {
-    const mainPageView = this.props.mainPageView;
+    const mainView = this.props.mainView;
     const catalogView = this.props.catalogView;
     const higestRatedView = this.props.higestRatedView;
     const contactView = this.props.contactView;
@@ -17,7 +17,7 @@ export class HeaderConnected extends React.Component {
       <header className='headerConnected'>
         <Title />
         <NavBar 
-          mainPageView={mainPageView}
+          mainView={mainView}
           catalogView={catalogView}
           higestRatedView={higestRatedView}
           contactView={contactView}
