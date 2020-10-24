@@ -39,7 +39,7 @@ export class BeerBase extends React.Component {
           {filteredBeers.map((data, key) => {
             return (
               <>
-                {data.name.length >= 3 &&
+                {data.name.length >= 4 &&
                   <div className="catalogElementWrapper">
                     <fieldset>
                       <legend><span id="catalog-name" key={key}>{data.name.substring(0, 30)}</span></legend>

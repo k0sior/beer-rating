@@ -1,4 +1,4 @@
-$mainBack: rgba(206, 137, 58, 0.5);
+$mainBack: rgba(206, 137, 58, 0.37);
 $mainBorder: 2px black solid;
 $bottomBorder: 4px rgba(41, 29, 18, 0.6) solid;
 
@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(230, 194, 129);
+  background-image: linear-gradient(90deg, rgba(241, 222, 110, 0.7) , rgba(151, 145, 126, 0.7));
   margin: 0;
 
   code {
@@ -43,7 +43,7 @@ body {
       max-width: 420px;
       min-width: 160px;
       max-height: 200px;
-      padding: 0px 20px 30px 20px;
+      padding: 20px 20px 30px 20px;
 
       button {
         align-self: center;
@@ -64,9 +64,9 @@ body {
 
     a:hover {
       color: white;
-      font-size: 20px;
       transition-duration: 0.3s;
     }
+    
     button { 
       background: #dcdcdc;
       border-radius: 5px;
@@ -156,9 +156,24 @@ body {
       border: $bottomBorder;
       border-radius: 25px; 
 
-      h1 {
+      title {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+      }
+      p {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+
+        li {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -179,6 +194,7 @@ body {
         border-bottom: $bottomBorder;
         border-radius: 10px;
         font-size: 16px;
+        padding: 10px 10px 20px 20px;
 
         input {
           margin: 5px 10px 0 0 ;
@@ -219,7 +235,7 @@ body {
       }
       
       .star {
-        transition-duration: 200ms;
+        transition-duration: 500ms;
         cursor: pointer;
       }
 
@@ -229,17 +245,22 @@ body {
         border-bottom: $bottomBorder;
         border-radius: 5px;        
         padding: 15px 5px 0 0;
-        width: 700px;
+        max-width: 700px;
 
         fieldset {
           border: none;
       
           legend {
             font-size: 30px;
-            background: rgb(220, 220, 220);
-            border: $mainBorder;
+            background-image: linear-gradient(135deg, rgba(94, 40, 3, 0.7), rgba(196, 104, 28, 0.7));
+            border: none;
             border-radius: 5px;
-            margin: 0 0 10px 40px;
+            margin: auto;
+            color: rgb(255, 223, 119);
+            text-align: center;
+            margin: 0 0 30px ;
+            padding: 5px;
+            max-width: 500px;
           }
         }
 
@@ -249,6 +270,8 @@ body {
           grid-template-columns: 420px 250px;
           grid-template-rows: auto auto; 
           border: none;
+          padding: 0 0 20px 20px;
+          
 
           #catalog-photo{
             display: flex;
@@ -268,6 +291,8 @@ body {
             border-radius: 5px;
             font-size: 16px;
             max-width: 420px;
+            border-bottom: 1px solid black;
+            
             
             th{
               text-align: left;
@@ -275,21 +300,13 @@ body {
               color: rgb(82, 81, 81);
               background: $mainBack;
               border-radius: 5px;
+             
             }
             td {
               font-size: 17px;
               background: $mainBack;
               border-radius: 5px;
-              text-align: center;
-            }
-            
-            .starRating{ 
-              th{
-              text-align: center;
-              }
-              td {
-                font-size: 20px;
-              }
+              text-align: center;              
             }
           }
 
@@ -309,16 +326,14 @@ body {
       grid-area: main;
       justify-self: center;
       max-width: 475px;
-      max-height: 390px;
+      max-height: 450px;
       background: $mainBack;
       border-bottom: $bottomBorder;
       border-radius: 10px;
       font-size: 16px;
       padding: 20px;
+      margin-bottom: 50px;
 
-      .contactForm {
-        max-height: 346px;
-      }
     }
 
     .leftSidebar {
