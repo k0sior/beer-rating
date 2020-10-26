@@ -1,6 +1,6 @@
 export const base = [
   {
-    name: "Perła",
+    name: "Perła Chmielowa",
     type: "Pils",
     alc: "6.0%",
     ext: "12.2%",

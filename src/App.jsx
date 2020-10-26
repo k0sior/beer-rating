@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //displayed outside main content
 import { Warning } from "./components/Warning/Warning.jsx";
@@ -17,25 +18,25 @@ import { addBeerToCatalog } from "./components/Add/AddBeerFunction.jsx"
 
 
 export class ConnectedApp extends React.Component {
-  
+
   constructor(props) {
     super(props)
     this.ref = React.createRef();
     this.state = {
       view: "catalog",
-      scrollTop : 0,
+      scrollTop: 0,
       search: "",
     }
     this.changeView = this.changeView.bind(this)
   }
-  
+
   changeView(tab) {
     this.setState({
       view: tab
     })
   }
 
-  render () {
+  render() {
     const view = this.state.view;
 
     return (
@@ -43,27 +44,29 @@ export class ConnectedApp extends React.Component {
 
         { view === "" && <Warning entryView={() => this.changeView("main")} />}
 
-        { view !== "" && <LeftSidebar /> && <RightSidebar /> && <Footer />}
-
-        { view === "main" && <MainView /> }
         { view !== "" && <HeaderConnected onScroll={this.onScroll}
           mainView={() => this.changeView("main")}
           catalogView={() => this.changeView("catalog")}
           ratingView={() => this.changeView("rating")}
           contactView={() => this.changeView("contact")}
           addBeerView={() => this.changeView("addBeer")}
-        />}  
-        { view === "contact" && <Contact /> }
+        />}
+
+        { view === "main" && <MainView />}
+        
+        { view !== "" && <LeftSidebar /> && <RightSidebar /> && <Footer />}
+
+        { view === "contact" && <Contact />}
 
         <div className="catalogWrapper">
-          { view === "catalog" && <BeerBase />}
+          {view === "catalog" && <BeerBase />}
         </div>
 
-        <div className="addWrapper">     
-          { view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()}/> }
-        </div> 
+        <div className="addWrapper">
+          {view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()} />}
+        </div>
 
       </div>
     );
-  } 
+  }
 } 

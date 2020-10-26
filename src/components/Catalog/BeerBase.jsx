@@ -1,6 +1,9 @@
 import React from 'react'
 import { base } from "./data.js"
 import { StarRating } from "./Rating.jsx"
+import { Container, Row, Col } from 'reactstrap';
+import { FaBeer } from "react-icons/fa"
+
 
 export class BeerBase extends React.Component {
 
@@ -22,11 +25,13 @@ export class BeerBase extends React.Component {
         || beer.type.toLowerCase().indexOf(search.toLowerCase()) !== -1
     })
 
+    const urlRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(:[0-9]+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+
     return (
       <div className="beerBaseWrapper">
         <div className='searchBoxWrapper'>
           <form>
-            <label htmlFor="searchBeer">Szukaj piwa</label>
+            <label htmlFor="searchBeer"></label>
             <br />
             <input
               id="searchBeer"
@@ -38,66 +43,71 @@ export class BeerBase extends React.Component {
         <div className="beerBase">
           {filteredBeers.map((data, key) => {
             return (
-              <>
-                {data.name.length >= 4 &&
-                  <div className="catalogElementWrapper">
+              <div key={"beer" + key} id={"beer" + key}>
+                {data.name.length >= 3 &&
+                  <div className={"catalogElementWrapper"}>
                     <fieldset>
-                      <legend><span id="catalog-name" key={key}>{data.name.substring(0, 30)}</span></legend>
+                      <legend><span id="catalog-name">{data.name.substring(0, 30)}</span></legend>
                       <div className="catalogElement">
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Typ </th>
-                              <td><span id="catalog-type">{data.type}</span></td>
-                            </tr>
-                            <tr>
-                              <th>Alk. </th>
-                              <td><span id="catalog-alcohol">{data.alc}</span></td>
-                            </tr>
-                            {data.ext !== "" &&
-                              <tr>
-                                <th>Eks. </th>
-                                <td><span id="catalog-extract">{data.ext}</span></td>
-                              </tr>}
-                            {data.ibu !== "" &&
-                              <tr>
-                                <th>IBU </th>
-                                <td><span id="catalog-ibu">{data.ibu}</span></td>
-                              </tr>}
-                            {data.hop !== "" &&
-                              <tr>
-                                <th>Chmiele </th>
-                                <td><span id="catalog-hop">{data.hop}</span></td>
-                              </tr>}
-                            {data.prod !== "" &&
-                              <tr>
-                                <th>Producent/ Importer </th>
-                                <td><span id="catalog-producer">{data.prod}</span></td>
-                              </tr>}
-                            {data.country !== "" &&
-                              <tr>
-                                <th>Kraj pochodzenia </th>
-                                <td><span id="catalog-country">{data.country}</span></td>
-                              </tr>}
-                              <br/>
-                            {<tr>
-                              <th> Oceń </th>
-                              <td> <StarRating /> </td>
-                            </tr>
-                            }
-                          </tbody>
-                        </table>
+                        <Container>
+                          <Row>
+                            <Col>Typ </Col>
+                            <Col xs={8}><span id="catalog-type">{data.type}</span></Col>
+                          </Row>
+                          <Row>
+                            <Col>Alk. </Col>
+                            <Col xs={8}><span id="catalog-alcohol" >{data.alc}</span></Col>
+                          </Row>
+                          {data.ext !== "" &&
+                            <Row>
+                              <Col>Eks. </Col>
+                              <Col xs={8}><span id="catalog-extract" >{data.ext}</span></Col>
+                            </Row>}
+                          {data.ibu !== "" &&
+                            <Row>
+                              <Col>IBU </Col>
+                              <Col xs={8}><span id="catalog-ibu" >{data.ibu}</span></Col>
+                            </Row>}
+                          {data.hop !== "" &&
+                            <Row>
+                              <Col>Chmiele </Col>
+                              <Col xs={8}><span id="catalog-hop" >{data.hop}</span></Col>
+                            </Row>}
+                          {data.prod !== "" &&
+                            <Row>
+                              <Col>Producent/ Importer </Col>
+                              <Col xs={8}><span id="catalog-producer" >{data.prod}</span></Col>
+                            </Row>}
+                          {data.country !== "" &&
+                            <Row>
+                              <Col>Kraj pochodzenia </Col>
+                              <Col xs={8}><span id="catalog-country" >{data.country}</span></Col>
+                            </Row>}
+                          <br />
+                          {<Row>
+                            <Col> Oceń </Col>
+                            <Col xs={8}><span id="catalog-rating"> <StarRating /> </span></Col>
+                          </Row>
+                          }
+                        </Container>
                         <div id="catalog-description">
                           {data.description}
                         </div>
                         <div id="catalog-photo">
-                          <img src={data.photo} alt="BRAK ZDJĘCIA"></img>
+                          {urlRegex.test(data.photo) &&
+                            <img src={data.photo} alt=""></img>}
+
+                          {urlRegex.test(data.photo) === false &&
+                            <FaBeer size={200}
+                              style={{
+                                color: "rgb(220,220,220)"
+                              }} />}
                         </div>
                       </div>
                     </fieldset>
                   </div>
                 }
-              </>
+              </div>
             )
           })}
         </div>

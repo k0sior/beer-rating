@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MainView = () => {
 
@@ -26,19 +25,10 @@ const MainView = () => {
           <Row>
             <Col><p>jakiś tekst</p></Col>
             <Col><p>ostatnio dodane</p></Col>
-            
           </Row>
         </Container>
 
-        <ul id="links">
-          <li>Warto zobaczyć:</li>
-          <li><a href="https://www.browary-polskie.pl/o-piwie/ciekawostki/">
-            Ciekawostki</a></li>
-          <li><a href="https://udh.pl/aboutbeer/o-piwie/?">
-            Ważne informacje</a></li>
-          <li></li>
-          <li></li>
-        </ul>
+
       </main>
     </div>
   )
