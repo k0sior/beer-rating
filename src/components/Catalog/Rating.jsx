@@ -23,7 +23,7 @@ export const StarRating = () => {
               className="star" 
               onMouseEnter={() => setHover(ratingValue)}
               onMouseLeave={() => setHover(null)}
-              color={ratingValue <= (hover || rating) ? "#ffc115" : "#dcdcdc"}
+              color={ratingValue <= (hover || rating) ? "#ffee00" : "#dcdcdc"}
               size={30}              
             />
           </label>

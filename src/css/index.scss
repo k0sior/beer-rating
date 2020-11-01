@@ -1,6 +1,8 @@
 $mainBack: rgba(250, 184, 108, 0.37);
 $mainBorder: 2px black solid;
 $bottomBorder: 4px rgba(41, 29, 18, 0.6) solid;
+$mainShadow: 5px 5px 25px rgb(0, 0, 0);
+
 
 
 body {
@@ -180,7 +182,7 @@ body {
         justify-self: left;
         max-width: 475px;
         background-color: $mainBack;
-        border-bottom: $bottomBorder;
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
         border-radius: 10px;
         font-size: 16px;
         padding: 10px 10px 20px 20px;
@@ -231,10 +233,10 @@ body {
         .catalogElementWrapper {
           display: grid;
           background: $mainBack;
-          border-bottom: $bottomBorder;
           border-radius: 5px;
           padding: 15px 5px 0 0;
           max-width: 700px;
+          box-shadow: 5px 5px 25px rgb(0, 0, 0);
 
           fieldset {
             border: none;
@@ -252,7 +254,7 @@ body {
               max-width: 500px;
             }
           }
-
+          
           .catalogElement {
             display: grid;
             grid-template-areas: "info photo""desc desc";
@@ -319,11 +321,12 @@ body {
       max-width: 475px;
       max-height: 450px;
       background: $mainBack;
-      border-bottom: $bottomBorder;
+      box-shadow: $mainShadow;
       border-radius: 10px;
       font-size: 16px;
       padding: 20px;
       margin-bottom: 50px;
+      
     }
 
     .leftSidebar {
@@ -351,7 +354,7 @@ body {
       }
 
       a {
-        color: rgb(0, 0, 0);
+        color: #000000;
       }
     }
   }

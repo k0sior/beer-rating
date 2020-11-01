@@ -6,6 +6,7 @@ export class Footer extends React.Component {
 
   render() {
     const piwko = <FaBeer size={25} style={{marginLeft:5}}/>
+    
     return (
       <footer className="footerWrapper">
         
