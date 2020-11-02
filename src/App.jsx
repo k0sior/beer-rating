@@ -14,7 +14,7 @@ import { BeerBase } from "./components/Catalog/BeerBase.jsx";
 import { Contact } from "./components/Contact/Contact.jsx";
 import { InputForm } from './components/Add/InputForm.jsx';
 // functions 
-import { addBeerToCatalog } from "./components/Add/AddBeerFunction.jsx"
+// import { addBeerToCatalog } from "./components/Add/AddBeerFunction.jsx"
 
 
 export class ConnectedApp extends React.Component {
@@ -63,7 +63,7 @@ export class ConnectedApp extends React.Component {
         </div>
 
         <div className="addWrapper">
-          {view === "addBeer" && <InputForm submitForm={() => addBeerToCatalog()} />}
+          {view === "addBeer" && <InputForm submitForm={() => console.log("hi")} />}
         </div>
 
       </div>

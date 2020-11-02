@@ -26,7 +26,7 @@ body {
       "header header  header"
       "leftSide main rightSide"
       "footer footer footer";
-    grid-template-columns: 10vw auto 10vw;
+    grid-template-columns: 5vw auto 5vw;
     grid-template-rows: 110px auto auto 200px;
     transition-duration: 300ms;
 
@@ -163,77 +163,22 @@ body {
         align-items: center;
       }
 
-      p {
-        text-align: center;
-      }
-    }
-
-    .addWrapper {
-      justify-self: center;
-      display: grid;
-      grid-area: main;
-      grid-template-areas: "main1 main2";
-      grid-template-columns: 50% 50%;
-      grid-template-rows: auto;
-      column-gap: 20px;
-
-      .inputFormWrapper {
-        grid-area: main1;
-        justify-self: left;
-        max-width: 475px;
-        background-color: $mainBack;
-        box-shadow: 5px 5px 25px rgb(0, 0, 0);
-        border-radius: 10px;
-        font-size: 16px;
-        padding: 10px 10px 20px 20px;
-
-        input {
-          margin: 5px 10px 0 0;
-        }
-
-        button {
-          margin: 0;
-        }
-      }
-    }
-
-    .catalogWrapper {
-      grid-area: main;
-
-      .searchBoxWrapper {
+      h4 {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-bottom: 2rem;
-
-        input {
-          height: 40px;
-          font-size: 18px;
-        }
       }
 
+
       .beerBase {
-        display: grid;
-        grid-area: main;
-        grid-template-areas: "col1 col2";
-        grid-template-columns: 700px 700px;
-        grid-template-rows: auto auto;
-        column-gap: 50px;
-        row-gap: 50px;
+        min-width: 700px;
 
-        input[type="radio"] {
-          display: none;
-        }
-
-        .star {
-          transition-duration: 500ms;
-          cursor: pointer;
-        }
 
         .catalogElementWrapper {
-          display: grid;
+          display: flex;
+          flex-direction: column;
           background: $mainBack;
           border-radius: 5px;
+          margin: 50px 0 0 0;
           padding: 15px 5px 0 0;
           max-width: 700px;
           box-shadow: 5px 5px 25px rgb(0, 0, 0);
@@ -254,7 +199,7 @@ body {
               max-width: 500px;
             }
           }
-          
+
           .catalogElement {
             display: grid;
             grid-template-areas: "info photo""desc desc";
@@ -312,6 +257,168 @@ body {
             }
           }
         }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .addWrapper {
+      justify-self: center;
+      display: grid;
+      grid-area: main;
+      grid-template-areas: "main1 main2";
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      column-gap: 20px;
+
+      .inputFormWrapper {
+        grid-area: main1;
+        justify-self: left;
+        max-width: 475px;
+        background-color: $mainBack;
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 10px 10px 20px 20px;
+
+        input {
+          margin: 5px 10px 0 0;
+        }
+
+        button {
+          margin: 0;
+        }
+      }
+    }
+
+    .catalogWrapper {
+      grid-area: main;
+
+      .searchBoxWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        input {
+          height: 40px;
+          font-size: 18px;
+        }
+      }
+
+      .beerBaseWrapper {
+        justify-self: center;
+        grid-area: main;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+
+        .beerBase {
+          display: grid;
+          grid-area: main;
+          grid-template-areas: "col1 col2";
+          grid-template-columns: 700px 700px;
+          grid-template-rows: auto auto;
+          column-gap: 50px;
+          row-gap: 50px;
+
+          input[type="radio"] {
+            display: none;
+          }
+
+          .star {
+            transition-duration: 500ms;
+            cursor: pointer;
+          }
+
+          .catalogElementWrapper {
+            display: grid;
+            background: $mainBack;
+            border-radius: 5px;
+            padding: 15px 5px 0 0;
+            max-width: 700px;
+            box-shadow: 5px 5px 25px rgb(0, 0, 0);
+
+            fieldset {
+              border: none;
+
+              legend {
+                font-size: 30px;
+                background-image: linear-gradient(135deg, rgba(94, 40, 3, 0.7), rgba(196, 104, 28, 0.7));
+                border: none;
+                border-radius: 5px;
+                margin: auto;
+                color: rgb(255, 223, 119);
+                text-align: center;
+                margin: 0 0 30px;
+                padding: 5px;
+                max-width: 500px;
+              }
+            }
+
+            .catalogElement {
+              display: grid;
+              grid-template-areas: "info photo""desc desc";
+              grid-template-columns: 420px 250px;
+              grid-template-rows: auto auto;
+              border: none;
+              padding: 0 0 20px 20px;
+
+              .row {
+                font-size: 18px;
+                font-weight: bold;
+
+                .col {
+                  color: rgb(83, 83, 81);
+                }
+
+                .col-8 {
+                  display: flex;
+                  padding: 1px;
+                  justify-content: center;
+                  align-items: center;
+
+
+                  span {
+                    border-bottom: 1px solid black;
+                    border-radius: 5px;
+                    background-color: rgb(231, 190, 128);
+                    margin: 2px;
+                    min-width: 280px;
+                    display: flex;
+                    justify-content: center;
+                  }
+                }
+              }
+
+              #catalog-photo {
+                display: flex;
+                justify-content: center;
+
+
+                img {
+                  grid-area: photo;
+                  max-width: 250px;
+                  height: 350px;
+                  border-radius: 5px;
+                }
+              }
+
+              #catalog-description {
+                grid-area: desc;
+                margin-top: 10px;
+                font-size: 16px;
+                background: $mainBack;
+                border-radius: 5px;
+              }
+            }
+          }
+
+        }
       }
     }
 
@@ -326,7 +433,7 @@ body {
       font-size: 16px;
       padding: 20px;
       margin-bottom: 50px;
-      
+
     }
 
     .leftSidebar {
