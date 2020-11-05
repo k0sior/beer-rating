@@ -59,6 +59,110 @@ body {
 
     }
 
+    .beerBase {
+
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .star {
+        transition-duration: 500ms;
+        cursor: pointer;
+      }
+
+      .catalogElementWrapper {
+        display: grid;
+        background: $mainBack;
+        border-radius: 5px;
+        padding: 15px 5px 0 0;
+        max-width: 700px;
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
+
+        fieldset {
+          border: none;
+
+          legend {
+            font-size: 30px;
+            background-image: linear-gradient(135deg, rgba(94, 40, 3, 0.7), rgba(196, 104, 28, 0.7));
+            border: none;
+            border-radius: 5px;
+            margin: auto;
+            color: rgb(255, 223, 119);
+            text-align: center;
+            margin: 0 0 30px;
+            padding: 5px;
+            max-width: 500px;
+            
+            button {
+              background: none;
+              border: none;
+              font-size: 26px;
+              color: rgb(255, 223, 119);
+            }
+          }
+        }
+
+        .catalogElement {
+          display: grid;
+          grid-template-areas: "info photo""desc desc";
+          grid-template-columns: 420px 250px;
+          grid-template-rows: auto auto;
+          border: none;
+          padding: 0 0 20px 20px;
+
+          .row {
+            font-size: 18px;
+            font-weight: bold;
+
+            .col {
+              color: rgb(83, 83, 81);
+            }
+
+            .col-8 {
+              display: flex;
+              padding: 1px;
+              justify-content: center;
+              align-items: center;
+
+
+              span {
+                border-bottom: 1px solid black;
+                border-radius: 5px;
+                background-color: rgb(231, 190, 128);
+                margin: 2px;
+                min-width: 280px;
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+
+          #catalog-photo {
+            display: flex;
+            justify-content: center;
+
+
+            img {
+              grid-area: photo;
+              max-width: 250px;
+              height: 350px;
+              border-radius: 5px;
+            }
+          }
+
+          #catalog-description {
+            grid-area: desc;
+            margin-top: 10px;
+            font-size: 16px;
+            background: $mainBack;
+            border-radius: 5px;
+          }
+        }
+      }
+
+    }
+
     a:visited {
       color: white;
     }
@@ -77,15 +181,16 @@ body {
       transition-duration: 0.5s;
       margin-right: 3px;
       outline: none;
-    }
 
-    button:visited {
-      background-color: white;
-    }
 
-    button:hover {
-      background-color: white;
-      transition-duration: 0.2s;
+      button:visited {
+        background-color: white;
+      }
+
+      button:hover {
+        background-color: white;
+        transition-duration: 0.2s;
+      }
     }
 
     input {
@@ -94,10 +199,11 @@ body {
       height: 20px;
       transition-duration: 0.2s;
       outline: none;
-    }
 
-    input:focus {
-      background-color: white;
+
+      input:focus {
+        background-color: white;
+      }
     }
 
     textarea {
@@ -107,10 +213,11 @@ body {
       resize: none;
       outline: none;
       transition-duration: 0.2s;
-    }
 
-    textarea:focus {
-      background: white;
+
+      textarea:focus {
+        background: white;
+      }
     }
 
     .headerConnected {
@@ -178,7 +285,7 @@ body {
           flex-direction: column;
           background: $mainBack;
           border-radius: 5px;
-          margin: 50px 0 0 0;
+          margin: 30px 0 30px 0;
           padding: 15px 5px 0 0;
           max-width: 700px;
           box-shadow: 5px 5px 25px rgb(0, 0, 0);
@@ -308,6 +415,109 @@ body {
         }
       }
 
+      .beerBase {
+        display: grid;
+        grid-area: main;
+        grid-template-areas: "col1 col2";
+        grid-template-columns: 700px 700px;
+        grid-template-rows: auto auto;
+        column-gap: 50px;
+        row-gap: 50px;
+
+        input[type="radio"] {
+          display: none;
+        }
+
+        .star {
+          transition-duration: 500ms;
+          cursor: pointer;
+        }
+
+        .catalogElementWrapper {
+          display: grid;
+          background: $mainBack;
+          border-radius: 5px;
+          padding: 15px 5px 0 0;
+          max-width: 700px;
+          box-shadow: 5px 5px 25px rgb(0, 0, 0);
+
+          fieldset {
+            border: none;
+
+            legend {
+              font-size: 30px;
+              background-image: linear-gradient(135deg, rgba(94, 40, 3, 0.7), rgba(196, 104, 28, 0.7));
+              border: none;
+              border-radius: 5px;
+              margin: auto;
+              color: rgb(255, 223, 119);
+              text-align: center;
+              margin: 0 0 30px;
+              padding: 5px;
+              max-width: 500px;
+            }
+          }
+
+          .catalogElement {
+            display: grid;
+            grid-template-areas: "info photo""desc desc";
+            grid-template-columns: 420px 250px;
+            grid-template-rows: auto auto;
+            border: none;
+            padding: 0 0 20px 20px;
+
+            .row {
+              font-size: 18px;
+              font-weight: bold;
+
+              .col {
+                color: rgb(83, 83, 81);
+              }
+
+              .col-8 {
+                display: flex;
+                padding: 1px;
+                justify-content: center;
+                align-items: center;
+
+
+                span {
+                  border-bottom: 1px solid black;
+                  border-radius: 5px;
+                  background-color: rgb(231, 190, 128);
+                  margin: 2px;
+                  min-width: 280px;
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+            }
+
+            #catalog-photo {
+              display: flex;
+              justify-content: center;
+
+
+              img {
+                grid-area: photo;
+                max-width: 250px;
+                height: 350px;
+                border-radius: 5px;
+              }
+            }
+
+            #catalog-description {
+              grid-area: desc;
+              margin-top: 10px;
+              font-size: 16px;
+              background: $mainBack;
+              border-radius: 5px;
+            }
+          }
+        }
+
+      }
+
       .beerBaseWrapper {
         justify-self: center;
         grid-area: main;
@@ -317,108 +527,7 @@ body {
         flex-direction: column;
         align-content: center;
 
-        .beerBase {
-          display: grid;
-          grid-area: main;
-          grid-template-areas: "col1 col2";
-          grid-template-columns: 700px 700px;
-          grid-template-rows: auto auto;
-          column-gap: 50px;
-          row-gap: 50px;
 
-          input[type="radio"] {
-            display: none;
-          }
-
-          .star {
-            transition-duration: 500ms;
-            cursor: pointer;
-          }
-
-          .catalogElementWrapper {
-            display: grid;
-            background: $mainBack;
-            border-radius: 5px;
-            padding: 15px 5px 0 0;
-            max-width: 700px;
-            box-shadow: 5px 5px 25px rgb(0, 0, 0);
-
-            fieldset {
-              border: none;
-
-              legend {
-                font-size: 30px;
-                background-image: linear-gradient(135deg, rgba(94, 40, 3, 0.7), rgba(196, 104, 28, 0.7));
-                border: none;
-                border-radius: 5px;
-                margin: auto;
-                color: rgb(255, 223, 119);
-                text-align: center;
-                margin: 0 0 30px;
-                padding: 5px;
-                max-width: 500px;
-              }
-            }
-
-            .catalogElement {
-              display: grid;
-              grid-template-areas: "info photo""desc desc";
-              grid-template-columns: 420px 250px;
-              grid-template-rows: auto auto;
-              border: none;
-              padding: 0 0 20px 20px;
-
-              .row {
-                font-size: 18px;
-                font-weight: bold;
-
-                .col {
-                  color: rgb(83, 83, 81);
-                }
-
-                .col-8 {
-                  display: flex;
-                  padding: 1px;
-                  justify-content: center;
-                  align-items: center;
-
-
-                  span {
-                    border-bottom: 1px solid black;
-                    border-radius: 5px;
-                    background-color: rgb(231, 190, 128);
-                    margin: 2px;
-                    min-width: 280px;
-                    display: flex;
-                    justify-content: center;
-                  }
-                }
-              }
-
-              #catalog-photo {
-                display: flex;
-                justify-content: center;
-
-
-                img {
-                  grid-area: photo;
-                  max-width: 250px;
-                  height: 350px;
-                  border-radius: 5px;
-                }
-              }
-
-              #catalog-description {
-                grid-area: desc;
-                margin-top: 10px;
-                font-size: 16px;
-                background: $mainBack;
-                border-radius: 5px;
-              }
-            }
-          }
-
-        }
       }
     }
 

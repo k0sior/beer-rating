@@ -28,6 +28,7 @@ export class Footer extends React.Component {
           <li></li>
         </ul>
         <p>Strona stworzona przez <a href="https://github.com/k0sior" className="gitLink"><strong>k0sior</strong></a></p>
+        <p>Strona nie przystosowana do używania na urządzeniach mobilnych</p>
       </footer>
 
     )
