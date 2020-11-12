@@ -5,27 +5,31 @@ export class Footer extends React.Component {
 
 
   render() {
-    const piwko = <FaBeer size={25} style={{marginLeft:5}}/>
-    
+    const piwko = <FaBeer size={25} style={{ marginLeft: 5 }} />
+
     return (
       <footer className="footerWrapper">
-        
 
         <ul id="links">
-          <li><strong>Warto zobaczyć:</strong></li>
+          <li>
+            <strong>Warto zobaczyć:</strong>
+          </li>
           {piwko}
-          <li><a href="https://www.browary-polskie.pl/o-piwie/ciekawostki/">
-             Ciekawostki</a></li>
+          <li>
+            <a href="https://www.browary-polskie.pl/o-piwie/ciekawostki/">Ciekawostki</a>
+          </li>
           {piwko}
+          <li>
+            <a href="https://udh.pl/aboutbeer/o-piwie/?">Ważne informacje</a>
+          </li>
+          {piwko}
+          <li>
 
-          <li><a href="https://udh.pl/aboutbeer/o-piwie/?">
-            Ważne informacje</a></li>
+          </li>
           {piwko}
+          <li>
 
-          <li></li>
-          {piwko}
-
-          <li></li>
+          </li>
         </ul>
         <p>Strona stworzona przez <a href="https://github.com/k0sior" className="gitLink"><strong>k0sior</strong></a></p>
         <p>Strona nie przystosowana do używania na urządzeniach mobilnych</p>

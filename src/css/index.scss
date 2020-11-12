@@ -21,6 +21,7 @@ body {
 
   .connectedApp {
     margin: 0;
+    padding: 0;
     display: grid;
     grid-template-areas:
       "header header  header"
@@ -260,8 +261,13 @@ body {
     .mainViewWrapper {
       grid-area: main;
       background: $mainBack;
-      border: $bottomBorder;
+      box-shadow: 5px 5px 25px rgb(0, 0, 0);
       border-radius: 25px;
+      max-width: 1300px;
+
+      .row {
+        max-width: 1200px;
+      }
 
       title {
         display: flex;
@@ -405,6 +411,7 @@ body {
 
       .searchBoxWrapper {
         display: flex;
+        max-width: 1450px;
         justify-content: center;
         align-items: center;
         margin-bottom: 2rem;

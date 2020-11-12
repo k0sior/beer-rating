@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './css/index.scss';
-import {ConnectedApp} from './App.jsx';
+import { ConnectedApp } from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ConnectedApp />
+      <ConnectedApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

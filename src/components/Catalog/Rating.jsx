@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa"
 
-export const StarRating = () => {
+const StarRating = () => {
 
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
@@ -18,13 +18,13 @@ export const StarRating = () => {
               name="rating"
               value={ratingValue}
               onClick={() => setRating(ratingValue)}
- />
-            <FaStar 
-              className="star" 
+            />
+            <FaStar
+              className="star"
               onMouseEnter={() => setHover(ratingValue)}
               onMouseLeave={() => setHover(null)}
               color={ratingValue <= (hover || rating) ? "#ffee00" : "#dcdcdc"}
-              size={30}              
+              size={30}
             />
           </label>
         );
@@ -34,4 +34,4 @@ export const StarRating = () => {
   )
 }
 
-
+export default StarRating;

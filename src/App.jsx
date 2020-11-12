@@ -23,7 +23,7 @@ export class ConnectedApp extends React.Component {
     super(props)
     this.ref = React.createRef();
     this.state = {
-      view: "main",
+      view: "",
       scrollTop: 0,
       search: "",
     }
@@ -40,9 +40,15 @@ export class ConnectedApp extends React.Component {
     const view = this.state.view;
 
     return (
-      <div className="connectedApp">
+      <section className="connectedApp">
 
-        { view === "" && <Warning entryView={() => this.changeView("main")} />}
+        { view === "" &&
+          <Warning entryView={() =>
+            setTimeout(() => {
+              this.changeView("main")
+            }, 500
+            )} />
+        }
 
         { view !== "" && <HeaderConnected onScroll={this.onScroll}
           mainView={() => this.changeView("main")}
@@ -53,20 +59,20 @@ export class ConnectedApp extends React.Component {
         />}
 
         { view === "main" && <MainView />}
-        
+
         { view !== "" && <LeftSidebar /> && <RightSidebar /> && <Footer />}
 
-        { view === "contact" && <Contact />}
+        { view === "contact" && <Contact sendMessage={() => console.log("sending message")} />}
 
         <div className="catalogWrapper">
           {view === "catalog" && <BeerBase />}
         </div>
 
         <div className="addWrapper">
-          {view === "addBeer" && <InputForm submitForm={() => console.log("hi")} />}
+          {view === "addBeer" && <InputForm submitForm={() => console.log("adding beer")} />}
         </div>
 
-      </div>
+      </section>
     );
   }
 } 
