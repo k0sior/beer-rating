@@ -23,7 +23,7 @@ export class ConnectedApp extends React.Component {
     super(props)
     this.ref = React.createRef();
     this.state = {
-      view: "",
+      view: "main",
       scrollTop: 0,
       search: "",
     }
@@ -53,7 +53,7 @@ export class ConnectedApp extends React.Component {
         { view !== "" && <HeaderConnected onScroll={this.onScroll}
           mainView={() => this.changeView("main")}
           catalogView={() => this.changeView("catalog")}
-          ratingView={() => this.changeView("rating")}
+          // ratingView={() => this.changeView("rating")}
           contactView={() => this.changeView("contact")}
           addBeerView={() => this.changeView("addBeer")}
         />}

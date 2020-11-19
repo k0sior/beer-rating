@@ -36,25 +36,12 @@ const MainView = () => {
         </title>
         <br /> <br />
         <Container className="mainContainer">
-          <Row>
-            <Col className="column-1">
-              <Preview
-                beers={base}
-                start={base.length - 1}
-                end={base.length}
-              />
-              <Preview
-                beers={base}
-                start={base.length - 2}
-                end={base.length - 1}
-              />
-            </Col>
-
+          <Row className="row-main">
             <Col className="column-2"
-            style={{
-              marginTop: 20,
-              marginLeft: 20,
-            }}>
+              style={{
+                marginTop: 20,
+                marginLeft: 20,
+              }}>
               <p> <strong>Piwo </strong>– napój alkoholowy otrzymywany w wyniku fermentacji alkoholowej brzeczki piwnej. Brzeczka stanowi wodny wyciąg ze słodu browarnego z dodatkiem chmielu i ewentualnie innych surowców. W szerokim znaczeniu, zwłaszcza historycznym, piwem określa się napój fermentowany oparty na zbożowym surowcu. Piwo to najstarszy i najczęściej spożywany napój alkoholowy oraz trzeci pod względem popularności po wodzie i herbacie napój na świecie.</p>
               <p>Produkcja piwa najczęściej przebiega następująco: </p>
               <ol>
@@ -67,9 +54,21 @@ const MainView = () => {
               <p>Na charakterystyczne cechy sensoryczne piwa składają się substancje pochodzenia zbożowego, aromat i goryczka chmielowa, alkohol i dwutlenek węgla. Istotnym parametrem piwa jest zawartość ekstraktu przed fermentacją złożonego głównie z cukrów (ulegających przemianom biochemicznym do alkoholu) i dekstryn, a także ze związków azotowych i soli mineralnych. Zwykle zawartość ekstraktu wyrażana jest w stopniach Plato. Najpopularniejsze piwa, jasne lagery, zawierają przeciętnie ponad 90% wody i ok. 5% alkoholu objętościowo, ale wartości te mogą odbiegać w zależności od stylu piwa. Drożdże piwne w procesie fermentacji pozwalają uzyskać do kilkunastu procent alkoholu obj., ale w wyniku wymrażania wody jego zawartość można zwiększyć nawet do ponad 60%. Z drugiej strony przy użyciu odpowiedniej technologii produkcji można uzyskać piwo bezalkoholowe, zawierające poniżej 0,5% alkoholu obj.</p>
               <p>Do piwa w szerokim znaczeniu można zaliczyć również kwas chlebowy z Europy Wschodniej (wytwarzany poprzez fermentację chleba), tak zwane wina ryżowe (np. japońskie sake, chińskie huangjiu, koreańskie cheongju), mętne, fermentujące piwa afrykańskie z prosa, sorga, kukurydzy określane jako opaque beer, wiele fermentowanych napojów z Ameryki Środkowej i Południowej jak chicha z kukurydzy.</p>
             </Col>
+            <Col className="column-1">
+              <h4>Ostatnio dodane</h4>
+              <Preview
+                beers={base}
+                start={base.length - 1}
+                end={base.length}
+              />
+              <Preview
+                beers={base}
+                start={base.length - 2}
+                end={base.length - 1}
+              />
+            </Col>
           </Row>
         </Container>
-
       </main>
     </div>
   )
